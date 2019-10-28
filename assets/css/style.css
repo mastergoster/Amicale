@@ -1,0 +1,308 @@
+*{
+    margin: auto;
+    padding: auto;
+}
+
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+.footer {
+    bottom: 0;
+    width: 100%;
+    height: 60px;
+    background: #009DDF;
+    color: #FFFFFF;
+}
+
+.pagination {
+    width: 15%;
+    justify-content: center;
+}
+
+/* Début de l'En tête */
+
+/* Container qui va inclure toute notre page */
+
+.container {
+    max-width: 100%;
+}
+
+/* Logo de l'Amicale */
+
+img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.container_header{
+    background-color: black;
+}
+
+.content {
+    background-color: lightgrey;
+}
+
+/* Aide pour le débug des cadres */
+
+.debugblue {
+    border: solid 2px blue;
+}
+
+.debugred {
+    border: solid 2px red;
+}
+
+.debuggreen {
+    border: solid 2px green;
+}
+
+/* Bouton du menu */
+
+.btn{
+    border: #009DDF;
+}
+
+.bg-light{
+    background-color: #009DDF!important;
+}
+
+.btn-primary{
+    background-color: #009DDF!important;
+}
+
+.btn-outline-success a{
+    text-decoration: none;
+    color: yellow;
+    border-color: #009DDF;
+}
+
+.btn-outline-success:hover {
+    color: #fff;
+    background-color: #28a745;
+    border-color: #28a745;
+}
+
+.btn-outline-success:focus, .btn-outline-success.focus {
+    box-shadow: 0 0 0 0.2rem #009DDF;
+}
+
+.btn-outline-success.disabled, .btn-outline-success:disabled {
+    color: #009DDF;
+    background-color: transparent;
+}
+
+.btn-outline-success:not(:disabled):not(.disabled):active, .btn-outline-success:not(:disabled):not(.disabled).active,
+.show > .btn-outline-success.dropdown-toggle {
+color: #fff;
+background-color: #28a745;
+border-color: #009DDF;
+}
+
+.btn-outline-success:not(:disabled):not(.disabled):active:focus, .btn-outline-success:not(:disabled):not(.disabled).active:focus,
+.show > .btn-outline-success.dropdown-toggle:focus {
+box-shadow: 0 0 0 0.2rem #009DDF;
+}
+
+/* Page formaddalerte */
+.formaddalert{
+    width: 100%;
+}
+
+/* Fin de l'En-tête */
+
+.holder { 
+    background-color:white;
+    width:100%;
+    height:100%;
+    overflow:hidden;
+    padding:10px;
+    font-family:Helvetica;
+}
+.holder .mask {
+    position: relative;
+    left: 0px;
+    top: 10px;
+    width:300px;
+    height:240px;
+    overflow: hidden;
+}
+.holder ul {
+    list-style:none;
+    margin:0;
+    padding:0;
+    position: relative;
+}
+.holder ul li {
+    padding:10px 0px;
+}
+.holder ul li a {
+    color:darkred;
+    text-decoration:none;
+}
+
+/* Carousel */
+
+h5 {
+    display: inline-block;
+    padding: 10px;
+    background: #B9121B;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.p {
+    text-align: center;
+    padding-top: 40px;
+    font-size: 13px;
+}
+
+h2{
+    margin: 0;     
+    color: #666;
+    padding-top: 90px;
+    font-size: 52px;
+    font-family: "trebuchet ms", sans-serif;    
+}
+
+.item{
+    background: white;    
+    text-align: center;
+    height: 300px !important;
+}
+
+.carousel{
+    margin-top: 20px;
+}
+
+.bs-example{
+	margin: 20px;
+}
+
+.carousel.carousel-fade .item {
+    opacity:0;
+    filter: alpha(opacity=0); /* ie fix */
+}
+
+.carousel.carousel-fade .active.item {
+    opacity:1;
+    filter: alpha(opacity=100); /* ie fix */
+}
+
+.material-switch > input[type="checkbox"] {
+    display: none;   
+}
+
+.material-switch > label {
+    cursor: pointer;
+    height: 0px;
+    position: relative; 
+    width: 40px;  
+}
+
+.material-switch > label::before {
+    background: rgb(0, 0, 0);
+    box-shadow: inset 0px 0px 10px rgba(0, 0, 0, 0.5);
+    border-radius: 8px;
+    content: '';
+    height: 16px;
+    margin-top: -8px;
+    position:absolute;
+    opacity: 0.3;
+    transition: all 0.4s ease-in-out;
+    width: 40px;
+}
+.material-switch > label::after {
+    background: rgb(255, 255, 255);
+    border-radius: 16px;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
+    content: '';
+    height: 24px;
+    left: -4px;
+    margin-top: -8px;
+    position: absolute;
+    top: -4px;
+    transition: all 0.3s ease-in-out;
+    width: 24px;
+}
+.material-switch > input[type="checkbox"]:checked + label::before {
+    background: inherit;
+    opacity: 0.5;
+}
+.material-switch > input[type="checkbox"]:checked + label::after {
+    background: inherit;
+    left: 20px;
+}
+
+/* Menu Burger pour la version mobile */
+
+.nav-wrapper {
+	width: 80%;
+	margin: 0 10% !important;
+	height: 60px;
+	background-color: #EFF4E1;
+	position: absolute;
+	top: 100px;
+	z-index: 1000 !important;
+}
+
+.nav-wrapper ul {
+	margin: 0 auto;
+}
+
+.nav-wrapper ul li {
+	text-transform: uppercase;
+	padding: 0 3px;
+	
+}
+
+.nav-wrapper ul li i.menu-leaf {
+	font-size: 35px;
+	color: #5D9B3B;
+}
+
+.nav-wrapper ul li a {
+	color: #000000;
+}
+
+.nav-wrapper ul li a:hover {
+	color: #006F46;
+}
+
+.nav-wrapper ul li i.menu-search {
+	font-size: 25px;
+}
+
+.dropdown-parent {		/* Overriding Bootstrap CSS */
+	min-width: 6.5rem !important;
+	padding: 0 !important;
+	background-color: #EFF3E1 !important;
+	background-clip: unset !important;
+	border: none !important;
+
+}
+
+#company-link {
+	padding-top: 8px !important;
+	padding-right: 0.5rem !important;
+	padding-left: 0.5rem !important;
+}
+
+#company-link:focus, #company-link:hover {  /* Overriding Bootstrap CSS */
+	background-color: transparent !important;
+}
+
+.dropdown-child {
+	padding-top: 5px !important;
+	padding-right: 0.5rem !important;
+	padding-left: 0.5rem !important;
+	border-top: 1px solid rgba(127, 234, 195, 0.7) !important;
+	border-left: none !important;
+	border-right: none !important;
+	border-bottom: none !important;
+	border-radius: 0px !important;
+}
+
+/* Fin Menu Burger pour la version mobile*/
+

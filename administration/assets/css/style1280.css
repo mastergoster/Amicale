@@ -1,0 +1,147 @@
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+/* Container qui va inclure toute notre page */
+
+.container {
+    padding: 0 15px;
+    max-width: 100%;
+}
+
+/* Logo de l'Amicale */
+
+img {
+    max-width: 45%;
+}
+
+.container_header{
+    background-color: black;
+}
+
+.content {
+    background-color: lightgrey;
+}
+
+.btn{
+    border: #009DDF;
+}
+
+.bg-light{
+    background-color: #009DDF!important;
+}
+
+/* Début de modification des boutons dans le BO */
+
+.btn-primary{
+    background-color: #009DDF!important;
+}
+
+.btn-outline-success a{
+    text-decoration: none;
+    color: yellow;
+    border-color: #009DDF;
+}
+
+.btn-outline-success:hover {
+    color: #fff;
+    background-color: #28a745;
+    border-color: #28a745;
+}
+
+.btn-outline-success:focus, .btn-outline-success.focus {
+    box-shadow: 0 0 0 0.2rem #009DDF;
+}
+
+.btn-outline-success.disabled, .btn-outline-success:disabled {
+    color: #009DDF;
+    background-color: transparent;
+}
+
+.btn-outline-success:not(:disabled):not(.disabled):active, .btn-outline-success:not(:disabled):not(.disabled).active,
+.show > .btn-outline-success.dropdown-toggle {
+color: #fff;
+background-color: #28a745;
+border-color: #009DDF;
+}
+
+.btn-outline-success:not(:disabled):not(.disabled):active:focus, .btn-outline-success:not(:disabled):not(.disabled).active:focus,
+.show > .btn-outline-success.dropdown-toggle:focus {
+box-shadow: 0 0 0 0.2rem #009DDF;
+}
+
+/* Fin de modification des boutons dans le BO */
+
+
+/* ----------------------------- */
+
+/* Fin de l'En-tête */
+
+/* ----------------------------- */
+
+
+
+
+/* Inclusion des pages view */
+
+/* ----------------------------- */
+
+/* Début du contenu */
+
+/* ----------------------------- */
+
+
+.categorymanage{
+    display:flex;
+    justify-content: space-between;
+}
+
+/* ----------------------------- */
+
+/* Fin du contenu */
+
+/* ----------------------------- */
+
+
+/* ----------------------------- */
+
+/* Début du Pied de Page */
+
+/* ----------------------------- */
+
+.footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background: #009DDF;
+    color: #FFFFFF;
+}
+
+/* ----------------------------- */
+
+/* Fin du Pied de Page */
+
+/* ----------------------------- */
+
+select {
+    font-family: 'FontAwesome', 'Second Font name'
+  }
+
+  .fa-select {
+    font-family: 'Lato', 'Font Awesome 5 Free';
+    font-weight: 900;
+}
+
+.choco{
+    font-size: 16px;
+}
+
+/* Nouvelles règles si la fenêtre fait au plus 1024px de large */
+@media screen and (max-width: 1024px)
+{
+    .container
+    {
+        margin: 0 -8px;
+    }
+}
