@@ -1,5 +1,5 @@
 <br>
-<div style='text-align: center'><a href='index.php?action=formaddalerte' class="btn btn-secondary">Ajouter une alerte</a></div>
+<div class="allalerte" style='text-align: center'><a href='index.php?action=formaddalerte' class="btn btn-secondary">Ajouter une alerte</a></div>
 <br>
 
 	<table class="col-md-8 col-md-offset-4 table table-bordered table-striped">

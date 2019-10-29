@@ -27,6 +27,10 @@
         <form class="form-inline">
             <button class="btn btn-outline-success btn btn-primary" type="button"><a href="index.php?action=allusers">Utilisateurs</a></button>
         </form>
+            <form class="form-inline">
+            <button type="button" class="btn btn-outline-success btn btn-primary"><a href="index.php?action=logout"><i class="fas fa-sign-out-alt"></i></a>
+            </button>  
+        </form>  
         
         </div>
     </nav>

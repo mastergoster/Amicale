@@ -35,8 +35,9 @@ html {
 /* Container qui va inclure toute notre page */
 
 .container {
-    padding: 0 15px;
+    padding: 0;
     max-width: 100%;
+    width: 100%;
 }
 
 /* Logo de l'Amicale */
@@ -155,9 +156,9 @@ box-shadow: 0 0 0 0.2rem #009DDF;
 
 select {
     font-family: 'FontAwesome', 'Second Font name'
-  }
+}
 
-  .fa-select {
+.fa-select {
     font-family: 'Lato', 'Font Awesome 5 Free';
     font-weight: 900;
 }

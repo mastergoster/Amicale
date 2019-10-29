@@ -9,12 +9,8 @@
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.0/js/bootstrap.bundle.min.js" integrity="sha384-VoPFvGr9GxhDT3n8vqqZ46twP5lgex+raTCfICQy73NLhN7ZqSfCtfSn4mLA2EFA" crossorigin="anonymous"></script>
         <link rel="stylesheet" href="assets/plugins/fontawesome-free-5.10.2/css/all.css">
         <link href="https://cdn.jsdelivr.net/gh/gitbrent/bootstrap4-toggle@3.6.1/css/bootstrap4-toggle.min.css" rel="stylesheet">
-        <link rel="stylesheet" media="screen and (max-width: 640px)" href="smallscreen.css" type="text/css" />
-        <link rel="stylesheet" media="screen and (max-width: 800px)" href="smallscreen.css" type="text/css" />
-        <link rel="stylesheet" media="screen and (max-width: 1024px)" href="smallscreen.css" type="text/css" />
-
         <link rel="stylesheet" href="assets/css/style.css">
-        <link rel="stylesheet" media="screen and (max-width: 1280px)" href="assets/css/style1280.css" />
+        <link rel="stylesheet" href="assets/css/style1280.css" />
     </head>
     <body>
     <header>

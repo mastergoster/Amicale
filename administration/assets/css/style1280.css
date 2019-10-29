@@ -6,7 +6,7 @@ html {
 /* Container qui va inclure toute notre page */
 
 .container {
-    padding: 0 15px;
+    padding: 0;
     max-width: 100%;
 }
 
@@ -143,5 +143,40 @@ select {
     .container
     {
         margin: 0 -8px;
+
     }
 }
+
+@media screen and (min-width: 360px) and (max-width: 640px)
+{
+    .container
+    {
+        margin: 0 -14px;
+    }
+}
+
+@media screen and (min-width: 411px) and (max-width: 711px)
+{
+    .container
+    {
+        margin: 0 0;
+    }
+}
+
+@media screen and (min-width: 375px) and (max-width: 667px)
+{
+    .container
+    {
+        margin: 0 7px;
+    }
+}
+
+@media screen and (min-width: 414px) and (max-width: 736px)
+{
+    .container
+    {
+        margin: 0 7px;
+    }
+}
+
+@media screen and (min-width: 992px) {.container { width: 100%; }}

@@ -15,12 +15,9 @@
             <form class="form-inline">
                 <button class="btn btn-outline-success btn btn-primary" type="button"><a href="index.php?action=allcategory">Contact</a></button>
             </form>
-            <form class="form-inline">
-                <button type="button" class="btn btn-outline-success btn btn-primary"><a href="index.php?action=login"><i class="fas fa-sign-out-alt"></i></a>
-                </button>  
-            </form>    
+            <form class="choco">
+            <a href="index.php?action=login"><i class="fas fa-sign-out-alt"></i></a>
+        </form> 
         </nav>
     </nav>
-
-    
 </div>
