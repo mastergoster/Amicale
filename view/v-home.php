@@ -1,35 +1,34 @@
 <?php echo "
-
     <div id='myCarousel' class='carousel slide' data-ride='carousel'>
-    <!-- Indicators -->
-    <ol class='carousel-indicators'>";
-    foreach($mesPins as $key => $post){
+        <!-- Indicators -->
+            <ol class='carousel-indicators'>";
+                foreach($mesPins as $key => $post){
         
-        if($mesPins[0] == $post){
-            echo "<li data-target='#myCarousel' data-slide-to='$key' class='active'></li>";
-        }else {
-            echo "<li data-target='#myCarousel' data-slide-to='$key'></li>";
-        }  
-    }
-        echo "
- 
-  
-    </ol>";
-    echo "
+                    if($mesPins[0] == $post)
+                    {
+                        echo "<li data-target='#myCarousel' data-slide-to='$key' class='active'></li>";
+                    }else
+                    {
+                        echo "<li data-target='#myCarousel' data-slide-to='$key'></li>";
+                    }  
+                }
+                        echo "
+                         </ol>";
+                         echo "
     <div class='carousel-inner'>";
-
-    foreach($mesPins as $post){
+                foreach($mesPins as $post){
         
-        if($mesPins[0] == $post)
-        {
-            echo "<div class='item active carousel-item'>";
-        }else 
-        {
-            echo "<div class='item  carousel-item'>";
-        }
-        echo "        
-        <span>20/10/2018</span><a href='".$post->getTitle()."'> ".$post->getTitle()."</a>
-        </div>";
+                        if($mesPins[0] == $post)
+                    {
+                        echo "<div class='item active carousel-item'>";
+                    }else 
+                    {
+                        echo "<div class='item  carousel-item'>";
+                    }
+                        echo "
+
+                    <img class='card-img-top' src='../assets/uploads/picture/".$post->getPicture()."' alt='Card image' style='width:50%'>
+    </div>";
         
     }
     echo " 

@@ -17,7 +17,9 @@ html {
 }
 
 .pagination {
-    width: 15%;
+    display: inline-flex;
+    
+    margin-left: 42%;
     justify-content: center;
 }
 
@@ -53,6 +55,10 @@ img {
 
 .debugred {
     border: solid 2px red;
+}
+
+.debugblack {
+    border: solid 2px black;
 }
 
 .debuggreen {
@@ -214,4 +220,8 @@ box-shadow: 0 0 0 0.2rem #009DDF;
 }
 
 /* Fin Menu Burger pour la version mobile*/
+
+.titre_carousel{
+    margin-left: 35%;
+}
 

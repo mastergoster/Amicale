@@ -2,7 +2,7 @@
             <footer class="footer">
                 <div class="container">
                     <div class="row">
-                        <div class="col-md-2">
+                        <div class="">
                             Contact :
                             <!--Facebook-->
                             <button type="button" class="btn btn-fb"><i class="fab fa-facebook-f"></i></button>

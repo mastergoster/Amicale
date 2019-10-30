@@ -20,8 +20,7 @@ require_once 'model/alerte.php';
         $mesPins = Post::findAllByPin();
         $nbPost = $monPost->getNbPost();
         $nbPage = ceil($nbPost / $limit);
-        //var_dump($page);
-//var_dump($nbPage);
+
         if($page >= $nbPage){
                 $page= $nbPage-1;
 

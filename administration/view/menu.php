@@ -1,5 +1,4 @@
-
-    <div class="nav-wrapper">
+<div class="nav-wrapper">
 	<nav class="navbar navbar-expand-lg bg-light navbar-toggleable-xs navbar-toggleable-sm navbar-toggleable-md">
     <a href=""><img src="assets/images/logo amicale sans fond Modif.png" alt="Logo Amicale" class="img-circle img-responsive"></a>    
 
@@ -34,4 +33,3 @@
         
         </div>
     </nav>
-    
