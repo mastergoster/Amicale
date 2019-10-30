@@ -115,20 +115,22 @@ class Post{
             return $mesPosts;
         }
 
-        public function findAllByCategoryId($idcateg){
-            require 'db.php';
-            require 'category.php';
-            $req = $db->prepare("SELECT * FROM post WHERE idcategory = ?");
-            $req->execute(array($idcateg));
-            $mesPosts = array();
-            while($result = $req->fetch()){
-                $maCategory = new Category();
-                $maCategory->retrieve($result['idcategory']);
-                $monPost = new Post($result['id'], $maCategory, $result['title'], $result['content'], $result['datepost'], $result['picture'], $result['file'], $result['pin']);
-                array_push($mesPosts, $monPost);
-            }
-            return $mesPosts;
+    //FindAllPaginate
+    public function findAllByCategoryId($idcateg, $limite, $offset){
+        require 'db.php';
+        require_once 'category.php';
+        
+        $req = $db->prepare("SELECT * FROM post WHERE pin = 1 LIMIT ".$idcateg." ".$limite." OFFSET ".$offset);
+        $req->execute(array());
+        $mesPosts = array();
+        while($result = $req->fetch()){
+            $maCategory = new Category();
+            $maCategory->retrieve($result['idcategory']);
+            $monPost = new Post($result['id'], $maCategory, $result['title'], $result['content'], $result['datepost'], $result['picture'], $result['file'], $result['pin']);
+            array_push($mesPosts, $monPost);
         }
+        return $mesPosts;
+    }
 
         public function getLastId()
         {

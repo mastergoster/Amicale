@@ -11,7 +11,7 @@ require_once 'model/alerte.php';
 
         $page = intval(isset($_GET['p'])?($_GET['p']):(0));
 
-        $limit = 2;
+        $limit = 6;
         $offsetDebut = ($page-0) * $limit;
         $offsetFin = ($page) * $limit;
 

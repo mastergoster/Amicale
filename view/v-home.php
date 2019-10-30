@@ -13,8 +13,8 @@
                     }  
                 }
                         echo "
-                         </ol>";
-                         echo "
+                            </ol>";
+                        echo "
     <div class='carousel-inner'>";
                 foreach($mesPins as $post){
         
@@ -23,7 +23,7 @@
                         echo "<div class='item active carousel-item'>";
                     }else 
                     {
-                        echo "<div class='item  carousel-item'>";
+                        echo "<div class='item carousel-item'>";
                     }
                         echo "
 
@@ -69,7 +69,7 @@ echo "
     {
         echo "
 
-        <div class='card' style='width:400px'>
+        <div class='card col-sm-6' style='width: 42%; height: 35em; margin: 25px;'>
         <img class='card-img-top' src='../assets/uploads/picture/".$post->getPicture()."' alt='Card image' style='width:100%'>
         <div class='card-body'>
             <h4 class='card-title'>".$post->getTitle()."</h4>
@@ -84,7 +84,7 @@ echo "
             <p class='card-text'><small class='text-muted'>".$post->getDatePost()."</small></p>
         </div>
         </div>
-        <br>
+
         ";
         ++$counter;
     }
