@@ -94,18 +94,22 @@ class Category {
         }
         return $mesCategory;
     }
+
     /**
      * Get the value of id
-     */ 
+     */
+
     public function getId()
     {
         return $this->id;
     }
+
     /**
      * Set the value of id
      *
      * @return  self
-     */ 
+     */
+
     public function setId($id)
     {
         $this->id = $id;
@@ -113,73 +117,84 @@ class Category {
     }
     /**
      * Get the value of alerte
-     */ 
+     */
+
     public function getAlerte()
     {
         return $this->alerte;
     }
+
     /**
      * Set the value of alerte
      *
      * @return  self
-     */ 
+     */
+
     public function setAlerte($alerte)
     {
         $this->alerte = $alerte;
         return $this;
     }
+
     /**
      * Get the value of name
-     */ 
+     */
+
     public function getName()
     {
         return $this->name;
     }
+
     /**
      * Set the value of name
      *
      * @return  self
-     */ 
+     */
+
     public function setName($name)
     {
         $this->name = $name;
         return $this;
     }
+
     /**
      * Get the value of icons
-     */ 
+     */
+
     public function getIcons()
     {
         return $this->icons;
     }
+
     /**
      * Set the value of icons
      *
      * @return  self
-     */ 
+     */
+
     public function setIcons($icons)
     {
         $this->icons = $icons;
         return $this;
     }
 
-        /**
-         * Get the value of codef
-         */ 
-        public function getCodef()
-        {
-                return $this->codef;
-        }
+    /**
+     * Get the value of codef
+     */ 
+    public function getCodef()
+    {
+        return $this->codef;
+    }
 
-        /**
-         * Set the value of codef
-         *
-         * @return  self
-         */ 
-        public function setCodef($codef)
-        {
-                $this->codef = $codef;
+    /**
+     * Set the value of codef
+     *
+     * @return  self
+     */ 
+    public function setCodef($codef)
+    {
+        $this->codef = $codef;
 
-                return $this;
-        }
+        return $this;
+    }
 }

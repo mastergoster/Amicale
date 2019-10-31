@@ -119,36 +119,6 @@ box-shadow: 0 0 0 0.2rem #009DDF;
 
 /* Fin de l'En-tête */
 
-.holder { 
-    background-color:white;
-    width:100%;
-    height:100%;
-    overflow:hidden;
-    padding:10px;
-    font-family:Helvetica;
-}
-.holder .mask {
-    position: relative;
-    left: 0px;
-    top: 10px;
-    width:300px;
-    height:240px;
-    overflow: hidden;
-}
-.holder ul {
-    list-style:none;
-    margin:0;
-    padding:0;
-    position: relative;
-}
-.holder ul li {
-    padding:10px 0px;
-}
-.holder ul li a {
-    color:darkred;
-    text-decoration:none;
-}
-
 
 /* Menu Burger pour la version mobile */
 
@@ -221,7 +191,46 @@ box-shadow: 0 0 0 0.2rem #009DDF;
 
 /* Fin Menu Burger pour la version mobile*/
 
+/*Début Carousel */
+
+.carousel{
+    height: 25em;
+}
+
 .titre_carousel{
     margin-left: 35%;
 }
 
+/*Fin Carousel */
+
+/*Début Bandeau des alertes */
+
+#cadrpg {
+    width:600px;
+    margin:0 auto; 
+    border:0; 
+    overflow:hidden;
+} 
+
+#newshr {
+    position:relative; 
+    width:580px; 
+    height:20px; 
+    overflow:hidden;
+    color:inherit; 
+    background:#FFFFFF url(news.gif); 
+    border:1px inset white; 
+}
+
+#defile { 
+    position:absolute; 
+    margin-top:1px; 
+    background-color:transparent; 
+}
+
+/*Fin Bandeau des alertes */
+
+.navbar-brand {
+    margin: 0;
+    padding: 0;
+}

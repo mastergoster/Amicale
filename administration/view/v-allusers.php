@@ -5,13 +5,12 @@
 
 <table class="table table-bordered table-striped col-md-4 col-md-offset-4">
 	<thead>
-	<tr>
-		<th colspan=2>Nom de l&#039Utilisateur :</th>
-	</tr>
+		<tr>
+			<th colspan=2>Nom de l&#039Utilisateur :</th>
+		</tr>
 	</thead>
 	<tbody>
 		<?php
-
 			foreach($mesUsers as $users)
 			{	// Cache le compte en cours dans l'administration.
 				if($_SESSION['amicale']['auth']['id'] !=$users->getId())

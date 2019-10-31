@@ -1,5 +1,5 @@
 <br>
-<div style='text-align: center'><a href='index.php?action=formaddhoraire' class="btn btn-secondary">Ajouter un horaire</a></div>
+	<div style='text-align: center'><a href='index.php?action=formaddhoraire' class="btn btn-secondary">Ajouter un horaire</a></div>
 <br>
 
 <table class="table table-bordered table-striped col-md-5 col-md-offset-4">

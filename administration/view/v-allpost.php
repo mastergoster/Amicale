@@ -16,7 +16,6 @@
 	</thead>
 	<tbody>
 		<?php
-
 			foreach($mesPosts as $post)
 			{				
 				echo '<tr><td>'.$post->getTitle().'</td>';
@@ -28,11 +27,9 @@
 				
 				echo '<td><a href="index.php?action=formeditpost&id='.$post->getId().'"><i class="far fa-edit"></i></a>&nbsp;&nbsp;&nbsp; <a href="index.php?action=delpost&id='.$post->getId().'&category='.$post->getCategory()->getId().'"><i class="far fa-trash-alt"></i></a></td></tr>';
 			}
-
 			if(count($mesPosts) == 0)
 			{
 				echo "<tr><td colspan=6>Aucun posts</td></tr>";
-			}
-			
+			}			
 		?>
 	</tbody>

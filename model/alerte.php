@@ -1,4 +1,4 @@
-<?php 
+<?php
     class Alerte {
         private $id;
         private $title;
@@ -87,84 +87,84 @@
 
         }
 
-        /**
-         * Get the value of id
-         */ 
-        public function getId()
-        {
-                return $this->id;
-        }
-
-        /**
-         * Set the value of id
-         *
-         * @return  self
-         */ 
-        public function setId($id)
-        {
-                $this->id = $id;
-
-                return $this;
-        }
-
-        /**
-         * Get the value of title
-         */ 
-        public function getTitle()
-        {
-                return $this->title;
-        }
-
-        /**
-         * Set the value of title
-         *
-         * @return  self
-         */ 
-        public function setTitle($title)
-        {
-                $this->title = $title;
-
-                return $this;
-        }
-
-        /**
-         * Get the value of message
-         */ 
-        public function getMessage()
-        {
-                return $this->message;
-        }
-
-        /**
-         * Set the value of message
-         *
-         * @return  self
-         */ 
-        public function setMessage($message)
-        {
-                $this->message = $message;
-
-                return $this;
-        }
-
-        /**
-         * Get the value of isactive
-         */ 
-        public function getIsactive()
-        {
-                return $this->isactive;
-        }
-
-        /**
-         * Set the value of isactive
-         *
-         * @return  self
-         */ 
-        public function setIsactive($isactive)
-        {
-                $this->isactive = $isactive;
-
-                return $this;
-        }
+    /**
+     * Get the value of id
+     */ 
+    public function getId()
+    {
+        return $this->id;
     }
+
+    /**
+     * Set the value of id
+     *
+     * @return  self
+     */ 
+    public function setId($id)
+    {
+        $this->id = $id;
+
+        return $this;
+    }
+
+    /**
+     * Get the value of title
+     */ 
+    public function getTitle()
+    {
+        return $this->title;
+    }
+
+    /**
+     * Set the value of title
+     *
+     * @return  self
+     */ 
+    public function setTitle($title)
+    {
+        $this->title = $title;
+
+        return $this;
+    }
+
+    /**
+     * Get the value of message
+     */ 
+    public function getMessage()
+    {
+        return $this->message;
+    }
+
+    /**
+     * Set the value of message
+     *
+     * @return  self
+     */ 
+    public function setMessage($message)
+    {
+        $this->message = $message;
+
+        return $this;
+    }
+
+    /**
+     * Get the value of isactive
+     */ 
+    public function getIsactive()
+    {
+        return $this->isactive;
+    }
+
+    /**
+     * Set the value of isactive
+     *
+     * @return  self
+     */ 
+    public function setIsactive($isactive)
+    {
+        $this->isactive = $isactive;
+
+        return $this;
+    }
+}
 ?>

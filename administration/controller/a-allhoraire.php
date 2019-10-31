@@ -1,23 +1,24 @@
 <?php 
 
-if(isset($_SESSION) && !empty($_SESSION['amicale']['auth']))
-{
-    require_once '../model/horaire.php';
-    
-    $mesHoraires = array ();    
+    if(isset($_SESSION) && !empty($_SESSION['amicale']['auth']))
+    {
+        require_once '../model/horaire.php';
+        
+        $mesHoraires = array ();    
 
-    // Instanciation de l'objet horaire
-    
-    $monHoraire = new Horaire();
+        // Instanciation de l'objet horaire
+        
+        $monHoraire = new Horaire();
 
-    // Récupération de toutes les données de la table HORAIRE
+        // Récupération de toutes les données de la table HORAIRE
 
-    $mesHoraires = $monHoraire->findAll();
+        $mesHoraires = $monHoraire->findAll();
 
-    // Affiche la vue 
+        // Affiche la vue 
 
-    $view = 'allhoraire';
-}else{
-    header('Location: ../index.php?action=formlogin');
-}
+        $view = 'allhoraire';
+    }else{
+        header('Location: ../index.php?action=formlogin');
+    }
+
 ?>

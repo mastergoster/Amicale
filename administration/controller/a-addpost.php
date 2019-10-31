@@ -1,5 +1,4 @@
-<?php 
-
+<?php
 if(isset($_SESSION) && !empty($_SESSION['amicale']['auth']))
 {
     // Autorise uniquement le compte admin
@@ -22,7 +21,13 @@ if(isset($_SESSION) && !empty($_SESSION['amicale']['auth']))
         $monObjet->create();
         $id=$monObjet->getLastId();
 
-        // Upload Picture
+    /*
+    *=============================================================================
+    *
+    * Upload de de photo/image
+    *
+    *=============================================================================
+    */
         $target_dir = "../assets/uploads/picture/";
         $target_file = $target_dir . basename($_FILES["picture"]["name"]);
         $imageFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
@@ -72,12 +77,16 @@ if(isset($_SESSION) && !empty($_SESSION['amicale']['auth']))
         {
         $uploadOk = 0;
         //echo "Sorry, there was an error uploading your file.";
-        }
-    
+        }    
 
-    //===============================================================================
+    /*
+    *=============================================================================
+    *
+    * Upload de fichier
+    *
+    *=============================================================================
+    */
 
-        // Upload File
         $target_dir_file = "../assets/uploads/file/";
         $target_file_file = $target_dir_file . basename($_FILES["file"]["name"]);
         $imageFileType_file = strtolower(pathinfo($target_file_file,PATHINFO_EXTENSION));
@@ -142,6 +151,4 @@ if(isset($_SESSION) && !empty($_SESSION['amicale']['auth']))
     {
         header('Location: ../index.php?action=formlogin');
 }
-
-
 ?>

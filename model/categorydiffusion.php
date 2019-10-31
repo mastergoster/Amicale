@@ -91,44 +91,44 @@
             return $mesCategoryDiffusions;
         }
 
-        /**
-         * Get the value of diffusion
-         */ 
-        public function getDiffusion()
-        {
-                return $this->diffusion;
-        }
+    /**
+     * Get the value of diffusion
+     */ 
+    public function getDiffusion()
+    {
+            return $this->diffusion;
+    }
 
-        /**
-         * Set the value of diffusion
-         *
-         * @return  self
-         */ 
-        public function setDiffusion($diffusion)
-        {
-                $this->diffusion = $diffusion;
+    /**
+     * Set the value of diffusion
+     *
+     * @return  self
+     */ 
+    public function setDiffusion($diffusion)
+    {
+            $this->diffusion = $diffusion;
 
-                return $this;
-        }
+            return $this;
+    }
 
-        /**
-         * Get the value of category
-         */ 
-        public function getCategory()
-        {
-                return $this->category;
-        }
+    /**
+     * Get the value of category
+     */ 
+    public function getCategory()
+    {
+            return $this->category;
+    }
 
-        /**
-         * Set the value of category
-         *
-         * @return  self
-         */ 
-        public function setCategory($category)
-        {
-                $this->category = $category;
+    /**
+     * Set the value of category
+     *
+     * @return  self
+     */ 
+    public function setCategory($category)
+    {
+            $this->category = $category;
 
-                return $this;
-        }
+            return $this;
+    }
     }
 ?>

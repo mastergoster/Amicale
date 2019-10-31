@@ -97,7 +97,8 @@
 
         /**
          * Get the value of id
-         */ 
+         */
+        
         public function getId()
         {
                 return $this->id;
@@ -107,7 +108,8 @@
          * Set the value of id
          *
          * @return  self
-         */ 
+         */
+
         public function setId($id)
         {
                 $this->id = $id;
@@ -117,42 +119,46 @@
 
         /**
          * Get the value of login
-         */ 
+         */
+
         public function getLogin()
         {
-                return $this->login;
+            return $this->login;
         }
 
         /**
          * Set the value of login
          *
          * @return  self
-         */ 
+         */
+
         public function setLogin($login)
         {
-                $this->login = $login;
+            $this->login = $login;
 
-                return $this;
+            return $this;
         }
 
         /**
          * Get the value of password
-         */ 
+         */
+
         public function getPassword()
         {
-                return $this->password;
+            return $this->password;
         }
 
         /**
          * Set the value of password
          *
          * @return  self
-         */ 
+         */
+
         public function setPassword($password)
         {
-                $this->password = $password;
+            $this->password = $password;
 
-                return $this;
+            return $this;
         }
 
         /**
@@ -170,8 +176,8 @@
          */ 
         public function setSlug($slug)
         {
-                $this->slug = $slug;
+            $this->slug = $slug;
 
-                return $this;
+            return $this;
         }
     }

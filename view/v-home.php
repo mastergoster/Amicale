@@ -49,20 +49,20 @@ echo "
 
 ?>
 
-<div class='holder'>
-<ul id='ticker01'>
 <?php 
-    foreach($mesPins as $post){
-        echo "
+    // Affichage du bandeau des alertes
+    echo " <div id='cadrpg'> 
 
-            <li><span>20/10/2018</span><a href='".$post->getTitle()."'> ".$post->getTitle()."</a></li>
+    <div id='newshr'>
+    <a style='width:100%' id='defile' >
+    .$monMessage.</a>
+    </div>
 
-        ";
-    }
-?>
-</ul>
+    </div>
 
-<?php 
+    ";
+
+    // Affichage du des posts
     $counter=0;
     
     foreach($mesPosts as $post)
@@ -88,9 +88,8 @@ echo "
         ";
         ++$counter;
     }
-    
-echo "</div>";
 
+echo "</div>";
 
     // Affiche le nombre de pagination (4)
     $start = max(0, $page);

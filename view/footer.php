@@ -16,6 +16,4 @@
         <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
         <script type="text/javascript" src="assets/js/script.js"></script>
 </body>
-
-
 </html>

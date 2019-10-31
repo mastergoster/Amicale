@@ -13,11 +13,9 @@
         <link rel="stylesheet" href="assets/css/style1280.css" />
     </head>
     <body>
-    <header>
-
-        <?php include 'view/menu.php';?>
-
-    </header>
+        <header>
+            <?php include 'view/menu.php';?>
+        </header>
 
     <div class="container">
 

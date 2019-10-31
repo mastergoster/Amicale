@@ -13,7 +13,6 @@
 		</thead>
 		<tbody>
 			<?php
-
 				foreach($mesAlertes as $alerte)
 				{		
 					echo '<tr><td>'.$alerte->getTitle().'</td>';

@@ -1,5 +1,5 @@
 <br>
-<div style='text-align: center'><a href='index.php?action=formadddiffusion' class="btn btn-secondary">Ajouter un mois de diffusion</a></div>
+	<div style='text-align: center'><a href='index.php?action=formadddiffusion' class="btn btn-secondary">Ajouter un mois de diffusion</a></div>
 <br>
 
 <table class="table table-bordered table-striped col-md-4 col-md-offset-4">
