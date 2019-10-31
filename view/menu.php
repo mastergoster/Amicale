@@ -12,14 +12,29 @@
             <form class="form-inline">
                 <button class="btn btn-outline-success btn btn-primary" type="button"><a href="index.php?action=allcategory">Contact</a></button>
             </form>
+
+
             <div class="dropdown">
                 <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     Catégorie
                 </button>
                 <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                    <a class="dropdown-item" href="#">Action</a>
+                    <?php 
+
+                    $maCategoryObj = new Category();
+                    $mesCategory = $maCategoryObj->findAll();
+
+                    foreach($mesCategory as $maCategory){
+                    echo"
+
+                    <a class='dropdown-item' href='index.php?action=home&idcategory=".$maCategory->getId()."'>".$maCategory->getName()."</a>";
+
+                    }
+                    ?>
                 </div>
             </div>
+            
+            
             <form class="choco">
             <a href="index.php?action=login"><i class="fas fa-sign-out-alt"></i></a>
         </form> 

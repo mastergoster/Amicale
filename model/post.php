@@ -83,11 +83,11 @@ class Post{
     }
 
     //FindAllPaginate
-    public function findAllPaginate($limite, $offset){
+    public function findAllPaginate($idCategory, $limite, $offset){
         require 'db.php';
         require_once 'category.php';
         
-        $req = $db->prepare("SELECT * FROM post WHERE pin = 0 LIMIT ".$limite." OFFSET ".$offset);
+        $req = $db->prepare("SELECT * FROM post WHERE pin = 0 AND idcategory =". $idCategory ." LIMIT ".$limite." OFFSET ".$offset);
         $req->execute(array());
         $mesPosts = array();
         while($result = $req->fetch()){

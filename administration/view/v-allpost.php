@@ -5,21 +5,23 @@
 <table class="col-md-8 col-md-offset-4 table table-bordered table-striped">
 	<thead>
 		<tr>
-			<th>Titre de l'Article :</th>
-			<th>Contenu de l'Article :</th>
-			<th>Date de l'Article :</th>
-			<th>Photo de l'Article :</th>
-			<th>Fichier :</th>
-			<th>Epingler :</th>
+			<th>Titre de l'Article</th>
+			<th>Contenu de l'Article</th>
+			<th>Date de l'Article</th>
+			<th>Photo de l'Article</th>
+			<th>Fichier</th>
+			<th>Epingler</th>
 			<th></th>
 		</tr>
 	</thead>
 	<tbody>
 		<?php
+			$counter=0;
+			
 			foreach($mesPosts as $post)
 			{				
 				echo '<tr><td>'.$post->getTitle().'</td>';
-				echo '<td>'.$post->getContent().'</td>';
+				echo '<td>'.substr(strip_tags($post->getContent()), 0, 130).'...</td>';
 				echo '<td>'.$post->getDatePost().'</td>';
 				echo '<td>'.$post->getPicture().'</td>';
 				echo '<td>'.$post->getFile().'</td>';
@@ -33,3 +35,5 @@
 			}			
 		?>
 	</tbody>
+	</table>
+	<br>

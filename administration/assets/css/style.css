@@ -1,4 +1,8 @@
-/* Début Débug */
+/* ----------------------------- */
+
+/* Début débug */
+
+/* ----------------------------- */
 
 .debugblue {
     border: solid 2px blue;
@@ -12,7 +16,9 @@
     border: solid 2px green;
 }
 
-/* Fin Débug */
+.debugblack {
+    border: solid 2px black;
+}
 
 
 /* ----------------------------- */
@@ -101,18 +107,6 @@ border-color: #009DDF;
 box-shadow: 0 0 0 0.2rem #009DDF;
 }
 
-/* Fin de modification des boutons dans le BO */
-
-
-/* ----------------------------- */
-
-/* Fin de l'En-tête */
-
-/* ----------------------------- */
-
-
-
-
 /* Inclusion des pages view */
 
 /* ----------------------------- */
@@ -126,12 +120,6 @@ box-shadow: 0 0 0 0.2rem #009DDF;
     display:flex;
     justify-content: space-between;
 }
-
-/* ----------------------------- */
-
-/* Fin du contenu */
-
-/* ----------------------------- */
 
 
 /* ----------------------------- */
@@ -148,22 +136,14 @@ box-shadow: 0 0 0 0.2rem #009DDF;
     color: #FFFFFF;
 }
 
-/* ----------------------------- */
 
-/* Fin du Pied de Page */
 
-/* ----------------------------- */
 
-select {
-    font-family: 'FontAwesome', 'Second Font name'
+.table thead th.fit {
+    vertical-align: none;
 }
 
-.fa-select {
-    font-family: 'Lato', 'Font Awesome 5 Free';
-    font-weight: 900;
-}
-
-.choco{
-    font-size: 16px;
+.table td, .table th {
+    vertical-align: middle;
 }
 

@@ -27,7 +27,7 @@
                     }
                         echo "
 
-                    <img class='card-img-top' src='../assets/uploads/picture/".$post->getPicture()."' alt='Card image' style='width:50%'>
+                    <img class='card-img-top' src='../assets/uploads/picture/".$post->getPicture()."' alt='Card image' style='height:25em; width:60%;'>
     </div>";
         
     }
@@ -62,7 +62,7 @@ echo "
 
     ";
 
-    // Affichage du des posts
+    // Affichage des posts
     $counter=0;
     
     foreach($mesPosts as $post)

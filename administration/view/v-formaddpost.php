@@ -5,12 +5,11 @@
 <?php
 foreach($mesCategory as $category)
 {
-echo "<option value='".$category->getId()."'>".$category->getName()."</option>";
+    echo "<option value='".$category->getId()."'>".$category->getName()."</option>";
 }
 ?>
 </select>
 </div>
-
     <div class="form-group">
         <label for="title">Titre de l'Article:</label>
         <input type="text" class="form-control" name="title" id="title" required>

@@ -2,12 +2,13 @@
 	<div style='text-align: center'><a href='index.php?action=formaddhoraire' class="btn btn-secondary">Ajouter un horaire</a></div>
 <br>
 
-<table class="table table-bordered table-striped col-md-5 col-md-offset-4">
+<table class="table table-bordered table-striped col-md-8 col-md-offset-4">
 	<thead>
 		<tr>
-			<th>Titre de l'Horaire :</th>
-			<th>Contenu de l'Horaire :</th>
-			<th></th>
+			<th th-lg >Titre</th>
+			<th th-lg >Contenu</th>
+			<th>Modification</th>
+			<th>Suppression</th>
 		</tr>
 	</thead>
 	<tbody>
@@ -18,7 +19,9 @@
 				echo '<tr><td>'.$horaire->getTitle().'</td>';
 				echo '<td>'.$horaire->getContent().'</td>';
 				
-				echo '<td><a href="index.php?action=formedithoraire&id='.$horaire->getId().'"><i class="far fa-edit"></i></a>&nbsp;&nbsp;&nbsp; <a href="index.php?action=delhoraire&id='.$horaire->getId().'"><i class="far fa-trash-alt"></i></a></td></tr>';
+				echo '<td><a href="index.php?action=formedithoraire&id='.$horaire->getId().'"><i class="far fa-edit"></i></a></td>';
+				echo '<td><a href="index.php?action=delhoraire&id='.$horaire->getId().'"><i class="far fa-trash-alt"></i></a></td></tr>';
+
 			}
 
 			if(count($mesHoraires) == 0)
@@ -28,3 +31,5 @@
 
 		?>
 	</tbody>
+</table>
+<br>

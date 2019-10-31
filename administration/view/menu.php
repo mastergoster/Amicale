@@ -18,9 +18,6 @@
             <button class="btn btn-outline-success btn btn-primary" type="button"><a href="index.php?action=allcategory">Catégories</a></button>
         </form>
         <form class="form-inline">
-            <button class="btn btn-outline-success btn btn-primary" type="button"><a href="index.php?action=alldiffusion">Diffusions</a></button>
-        </form>
-        <form class="form-inline">
             <button class="btn btn-outline-success btn btn-primary" type="button"><a href="index.php?action=allhoraire">Horaires</a></button>
         </form>
         <form class="form-inline">
