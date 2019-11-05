@@ -82,12 +82,11 @@ class Post{
         return $mesPosts;
     }
 
-    //FindAllPaginate
-    public function findAllPaginate($idCategory, $limite, $offset){
+    public function findAllPaginate($limite, $offset){
         require 'db.php';
         require_once 'category.php';
         
-        $req = $db->prepare("SELECT * FROM post WHERE pin = 0 AND idcategory =". $idCategory ." LIMIT ".$limite." OFFSET ".$offset);
+        $req = $db->prepare("SELECT * FROM post WHERE pin = 0 LIMIT ".$limite." OFFSET ".$offset);
         $req->execute(array());
         $mesPosts = array();
         while($result = $req->fetch()){
@@ -115,6 +114,23 @@ class Post{
             return $mesPosts;
         }
 
+            //FindAllPaginateByCategory
+        public function findAllPaginateByCategory($idCategory, $limite, $offset){
+        require 'db.php';
+        require_once 'category.php';
+        
+        $req = $db->prepare("SELECT * FROM post WHERE pin = 0 AND idcategory =". $idCategory ." LIMIT ".$limite." OFFSET ".$offset);
+        $req->execute(array());
+        $mesPosts = array();
+        while($result = $req->fetch()){
+            $maCategory = new Category();
+            $maCategory->retrieve($result['idcategory']);
+            $monPost = new Post($result['id'], $maCategory, $result['title'], $result['content'], $result['datepost'], $result['picture'], $result['file'], $result['pin']);
+            array_push($mesPosts, $monPost);
+        }
+        return $mesPosts;
+    }
+
         public function getLastId()
         {
             require 'db.php';
@@ -127,9 +143,20 @@ class Post{
         public function getNbPost()
         {
             require 'db.php';
-
-            $req = $db->prepare("SELECT COUNT(*) as nb FROM post");
+            // Compte le nb de posts qui ne sont pas épinglés.
+            $req = $db->prepare("SELECT COUNT(*) as nb FROM post WHERE pin = 0");
             $req->execute([]);
+
+            $result=$req->fetch();
+            return $result['nb'];
+        }
+
+        public function getNbPostByCategory($idCategory)
+        {
+            require 'db.php';
+
+            $req = $db->prepare("SELECT COUNT(*) as nb FROM post WHERE idcategory = ? AND pin = 0");
+            $req->execute([$idCategory]);
 
             $result=$req->fetch();
             return $result['nb'];

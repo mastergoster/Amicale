@@ -2,6 +2,7 @@
 
 require_once 'model/post.php';
 require_once 'model/alerte.php';
+require_once 'model/horaire.php';
 
 
 //$mesPosts = Post::findAll();
@@ -9,23 +10,43 @@ require_once 'model/alerte.php';
         $monAlerte = new Alerte();
         $monMessage = $monAlerte->showAlert();
 
-        $page = intval(isset($_GET['p'])?($_GET['p']):(0));
-        $idCategory = intval(isset($_GET['idcategory'])?($_GET['idcategory']):(0));        
+        $page = (isset($_GET['p'])?($_GET['p']):(0));
+        $idCategory = (isset($_GET['idcategory'])?($_GET['idcategory']):(0));        
 
         $limit = 6;
-        $offsetDebut = ($page-0) * $limit;
-        $offsetFin = ($page) * $limit;
+        // si page 1 est que limite = 6 alors offset 6 (6*1)
+        $offsetDebut = ($page) * $limit;
 
         $monPost = new Post();
-        $mesPosts = $monPost->findAllPaginate($idCategory, $limit, $offsetDebut);
+        if($idCategory != 0){
+                $mesPosts = $monPost->findAllPaginateByCategory($idCategory, $limit, $offsetDebut);
+                $nbPost = $monPost->getNbPostByCategory($idCategory);
+
+        }else{
+                $mesPosts = $monPost->findAllPaginate($limit, $offsetDebut);
+                $nbPost = $monPost->getNbPost();
+
+        }
+
         $mesPins = Post::findAllByPin();
-        $nbPost = $monPost->getNbPost();
         $nbPage = ceil($nbPost / $limit);
 
         if($page >= $nbPage){
                 $page= $nbPage-1;
 
-                header('Location: index.php?action=home&p=0');
+                header('Location: index.php?action=home&p='.$page);
+        }elseif($page < 0)
+        {
+                header('Location: index.php?action=home');
+        }
+
+        $mesHoraires = Horaire::findAll();
+        $nbPage = ceil($nbPost / $limit);
+
+        if($page >= $nbPage){
+                $page= $nbPage-1;
+
+                header('Location: index.php?action=home&p='.$page);
         }elseif($page < 0)
         {
                 header('Location: index.php?action=home');
