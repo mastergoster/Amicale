@@ -1,5 +1,5 @@
 <form action="index.php?action=addpost" method="post" enctype="multipart/form-data">
-<div class="form-group">
+<div class="form-group col-md-4">
 <label for="category">Catégorie :</label>
 <select class="form-control" name="category" id="category" required>
 <?php
@@ -10,23 +10,23 @@ foreach($mesCategory as $category)
 ?>
 </select>
 </div>
-    <div class="form-group">
+    <div class="form-group col-md-4">
         <label for="title">Titre de l'Article:</label>
         <input type="text" class="form-control" name="title" id="title" required>
     </div>
 
-    <div class="form-group">
+    <div class="form-group col-md-4">
         <label for="content">Contenu de l'Article :</label>
         <textarea class="form-control" name="content" id="content" required ></textarea>
     </div>
 
-    <div class="form-group">
+    <div class="form-group col-md-4">
         <label for="datepost">Date de l'Article :</label>
         <input type="date" class="form-control" name="datepost" id="datepost" required>
     </div>
 
-<div class="picture">
-<label for="picture">Photo de l'Article (jpg, jpeg, png, gif):</label>
+<div class="picture col-md-6">
+<label for="picture">Photo de l'Article (Formats supportés : jpg, jpeg, png, gif):</label>
 <div class="input-group mb-3">
 
 <div class="input-group-prepend">
@@ -40,7 +40,7 @@ foreach($mesCategory as $category)
 
 </div>
 
-<label for="file">Fichier (pdf, doc, docx) :</label>
+<label for="file">Fichier (Formats supportés : pdf, doc, docx) :</label>
     <div class="input-group mb-3">
     <div class="input-group-prepend">
     <span class="input-group-text">Télécharger</span>
@@ -54,7 +54,7 @@ foreach($mesCategory as $category)
     <input class="form-check-input" type="checkbox" id="pin" name="pin">
     <label class="form-check-label" for="pin">Cocher la case pour épingler l'article</label>
     </div>
-    <div class="">
+    <div class="col-md-4">
     <input class='btn btn-primary' type='submit' value='Envoyer'>
     </div>
 </form>

@@ -204,7 +204,7 @@ box-shadow: 0 0 0 0.2rem #009DDF;
     height: 25em;
 }
 
-.card-img{
+.card-img-top{
     padding: 15px 0;
 }
 
@@ -225,7 +225,7 @@ box-shadow: 0 0 0 0.2rem #009DDF;
 #cadrpg {
     width:600px;
     margin:0 auto; 
-    border:0; 
+
     overflow:hidden;
 } 
 
@@ -235,7 +235,7 @@ box-shadow: 0 0 0 0.2rem #009DDF;
     height:20px; 
     overflow:hidden;
     color:inherit; 
-    background:#FFFFFF url(news.gif); 
+    background:#FFFFFF; 
 }
 
 #defile { 
@@ -251,3 +251,11 @@ box-shadow: 0 0 0 0.2rem #009DDF;
     padding: 0;
 }
 
+.read_next{
+    color:blue;
+    margin:1em;
+}
+
+.error-template {padding: 40px 15px;text-align: center;}
+.error-actions {margin-top:15px;margin-bottom:15px;}
+.error-actions .btn { margin-right:10px; }

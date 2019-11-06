@@ -1,5 +1,5 @@
 <?php echo "
-    <div class='col-md-8' id='myCarousel' class='carousel slide' data-ride='carousel'>
+    <div class='carousel slide col-md-8 debugred' id='myCarousel' class='carousel slide' data-ride='carousel'>
         <!-- Indicators -->
             <ol class='carousel-indicators'>";
                 foreach($mesPins as $key => $post){
@@ -14,22 +14,22 @@
                         echo "
                             </ol>";
                         echo "
-    <div class='carousel-inner'>";
-                foreach($mesPins as $post){
-        
-                        if($mesPins[0] == $post)
-                    {
-                        echo "<div class='item active carousel-item'>";
-                    }else 
-                    {
-                        echo "<div class='item carousel-item'>";
-                    }
-                        echo "
+                <div class='carousel-inner'>";
+                        foreach($mesPins as $post){
+                
+                                if($mesPins[0] == $post)
+                            {
+                                echo "<div class='item active carousel-item'>";
+                            }else 
+                            {
+                                echo "<div class='item carousel-item'>";
+                            }
+                                echo "
 
-                    <img class='card-img-top' src='../assets/uploads/picture/".$post->getPicture()."' alt='Card image' >
-    </div>";
-        
-    }
+                            <img class='card-img-top' src='../assets/uploads/picture/".$post->getPicture()."' alt='Card image' >
+                </div>";
+                    
+                }
     echo " 
     </div>";
 
@@ -44,18 +44,15 @@ echo "
         <span class='glyphicon glyphicon-chevron-right'></span>
         <span class='sr-only'>Next</span>
     </a>
+    
 </div>";
-?>
+foreach($mesHoraires as $horaire){
+    echo "
+    <div class='col-md-2 offset-md-2 debuggreen'>Horaire d'ouverture de l'amicale : <br> 18 Avenue du 8 Mai 1945  <br> 03100 Montluçon     <p>".$horaire->getContent()."</p></div>
 
-<?php 
-    foreach($mesHoraires as $horaire){
-        echo "
-        <div class=''>Horaire d'ouverture de l'amicale :</div>
-        <div class=''>18 Avenue du 8 Mai 1945</div>
-        <div class=''>03100 Montluçon</div>
-            <a href='".$horaire->getContent()."'> ".$horaire->getContent()."</a>
-        ";
-    }
+
+    ";
+}
 ?>
 
 <?php 
@@ -63,7 +60,7 @@ echo "
     echo " 
     <div id='cadrpg'> 
     <br>
-        <div id='newshr'>
+        <div class='debugblue' id='newshr'>
             <a style='width:100%' id='defile' >
             .$monMessage.</a>
         </div>
@@ -77,21 +74,23 @@ echo "
     foreach($mesPosts as $post)
     {
         echo "
-
-        <div class='card col-sm-6' style='width: 28%; height: 35em; margin: 25px;'>
-        <img class='card-img-top' src='../assets/uploads/picture/".$post->getPicture()."' alt='Card image' style='width:100%'>
+        
+        <div class='card col-sm-6 debugblack' style='width: 28%; margin: 25px;'>
+            <img class='card-img-top' src='../assets/uploads/picture/".$post->getPicture()."' alt='Card image' style='width:100%'>
             <div class='card-body'>
                 <h4 class='card-title '>".$post->getTitle()."</h4>
                 <div id='preview".$counter."'>
-                ".substr(strip_tags($post->getContent()), 0, 130). "<div onclick='showhide(".$counter.")'>...  Lire la suite</div>
+                    ".substr(strip_tags($post->getContent()), 0, 130). "<div onclick='showhide(".$counter.")'>  <div class='read_next'>...  Lire la suite</div></div>
                 </div>
                 <div class='' id='scrollcontent".$counter."' style='display:none'>
-                ".$post->getContent()."
+                    ".$post->getContent()."
 
-                <button id='buttonarticle".$counter."' style='display:none' onclick='showhide(".$counter.")'>Fermer l'article</button>
+                    ".substr(strip_tags($post->getContent()), 0, 130). "<div onclick='showhide(".$counter.")'>  <div class='read_next'>...  Fermer l'article</div></div>
+
                 </div>
                 <p><a href='../assets/uploads/file/".$post->getFile()."'>".$post->getFile()."</a></p>
-                <p class='card-text'><small class='text-muted'>".$post->getDatePost()."</small></p>
+                <p class='card-text'><small class='text-muted'>".date('d/m/Y', strtotime($post->getDatePost()))."</small></p>
+
             </div>
         </div>
 
@@ -102,8 +101,7 @@ echo "
 echo "</div>";
 
     // Affiche le nombre de pagination (4)
-    $start = max(0, $page);
-    $end = min($nbPage-1, $page+3);
+
     //var_dump($page);
     //var_dump($start);die();
     $previous = $page -1;
@@ -111,29 +109,32 @@ echo "</div>";
 
     echo "<nav aria-label='pagination'>
             <ul class='pagination'>";
-            if($start>0){
+            if($page > 2){
     echo "
                 <li class='page-item'>
-                    <a  href='index.php?action=home&p=$previous&idcategory=".$idCategory."' aria-label='Previous'>
+                    <a  href='index.php?action=home&p=$previous"; echo ($idCategory != 0)?("&idcategory=".$idCategory):(""); echo"' aria-label='Previous'>
                         <span aria-hidden='true'>&laquo;</span>
                         <span class='sr-only'>Previous</span>
                     </a>
                 </li>";
             }
 
-                $i=$start;
-                
-                while($i-2 < $end-1){
-                    echo "
-                    <li class='page-item'>
-                        <a class='page-link' href='index.php?action=home&p=".($i+1)."&idcategory=".$idCategory."'>".($i+1)."</a>
-                    </li>";
-                ++$i;
+                $start = ($page-2 >= 0)?($page-2):(0);
+                $end = ($page+3 <= $nbPage)?($page+3):($nbPage);
+                $i=0;
+                while($i < $nbPage){
+                    if($i >= $start && $i < $end){
+                        echo "
+                        <li class='page-item'>
+                            <a class='page-link' href='index.php?action=home&p=".$i; echo ($idCategory != 0)?("&idcategory=".$idCategory):(""); echo"'>".($i+1)."</a>
+                        </li>";
+                    }   
+                    ++$i;
                 }
                 if($page<=$nbPage-4){
     echo "
                 <li class='page-item'>
-                    <a href='index.php?action=home&p=$next&idcategory=".$idCategory."' aria-label='Next'>
+                    <a href='index.php?action=home&p=$next"; echo ($idCategory != 0)?("&idcategory=".$idCategory):(""); echo"' aria-label='Next'>
                         <span aria-hidden='true'>&raquo;</span>
                         <span class='sr-only'>Next</span>
                     </a>
