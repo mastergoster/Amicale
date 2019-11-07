@@ -4,7 +4,7 @@
 
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"><span class="navbar-toggler-icon"><i class="fas fa-bars"></i></span>
         </button>
-        <form class="choco">
+        <form class="btn btn-outline-success btn btn-primary">
             <a href="index.php?action=home"><i class="fas fa-home"></i></a>
         </form> 
         <div class="collapse navbar-collapse" id="navbarNav">
