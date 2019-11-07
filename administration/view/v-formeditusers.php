@@ -1,4 +1,4 @@
-<form action="index.php?action=editpost" method="post">
+<form action="index.php?action=editusers" method="post">
     <div class="form-group col-md-4 col-md-offset-4">
         <label for="login">Modification de l'Utilisateur :</label>
         <input type="text" class="form-control" name="login" id="login" value="<?= $monObjet->getLogin() ?>" required>

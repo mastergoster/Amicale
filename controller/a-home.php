@@ -13,7 +13,7 @@ require_once 'model/horaire.php';
         $page = (isset($_GET['p'])?($_GET['p']):(0));
         $idCategory = (isset($_GET['idcategory'])?($_GET['idcategory']):(0));        
 
-        $limit = 2;
+        $limit = 6;
         // si page 1 est que limite = 6 alors offset 6 (6*1)
         $offsetDebut = ($page) * $limit;
 

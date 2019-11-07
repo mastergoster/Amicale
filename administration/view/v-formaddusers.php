@@ -1,3 +1,7 @@
+<?php 
+
+require_once "header.php";?>
+
 <div class="formediteditalerte col-md-6 col-md-offset-4">
 	<form action="index.php?action=addusers" method="post">
 		<div class="form-group col-md-6 col-md-offset-4">

@@ -1,5 +1,5 @@
 <?php echo "
-    <div class='carousel slide col-md-8 debugred' id='myCarousel' class='carousel slide' data-ride='carousel'>
+    <div class='carousel slide col-md-8' id='myCarousel' class='carousel slide' data-ride='carousel'>
         <!-- Indicators -->
             <ol class='carousel-indicators'>";
                 foreach($mesPins as $key => $post){
@@ -48,7 +48,7 @@ echo "
 </div>";
 foreach($mesHoraires as $horaire){
     echo "
-    <div class='col-md-2 offset-md-2 debuggreen'>Horaire d'ouverture de l'amicale : <br> 18 Avenue du 8 Mai 1945  <br> 03100 Montluçon     <p>".$horaire->getContent()."</p></div>
+    <div class=''>Horaire d'ouverture de l'amicale : <br> 18 Avenue du 8 Mai 1945  <br> 03100 Montluçon     <p>".$horaire->getContent()."</p></div>
 
 
     ";
@@ -60,7 +60,7 @@ foreach($mesHoraires as $horaire){
     echo " 
     <div id='cadrpg'> 
     <br>
-        <div class='debugblue' id='newshr'>
+        <div class='' id='newshr'>
             <a style='width:100%' id='defile' >
             .$monMessage.</a>
         </div>
@@ -75,8 +75,8 @@ foreach($mesHoraires as $horaire){
     {
         echo "
         
-        <div class='card col-sm-6 debugblack' style='width: 28%; margin: 25px;'>
-            <img class='card-img-top' src='../assets/uploads/picture/".$post->getPicture()."' alt='Card image' style='width:100%'>
+        <div class='card col-md-8' style='width: 28%; margin: 25px;'>
+            <img class='img_article' src='../assets/uploads/picture/".$post->getPicture()."' alt='Card image' style='width:100%'>
             <div class='card-body'>
                 <h4 class='card-title '>".$post->getTitle()."</h4>
                 <div id='preview".$counter."'>

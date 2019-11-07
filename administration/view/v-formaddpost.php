@@ -22,7 +22,7 @@ foreach($mesCategory as $category)
 
     <div class="form-group col-md-4">
         <label for="datepost">Date de l'Article :</label>
-        <input type="date" class="form-control" name="datepost" id="datepost" required>
+        <input type="date" placeholder="jj/mm/aaaa" class="form-control" name="datepost" id="datepost" required>
     </div>
 
 <div class="picture col-md-6">
@@ -42,20 +42,20 @@ foreach($mesCategory as $category)
 
 <label for="file">Fichier (Formats supportés : pdf, doc, docx) :</label>
     <div class="input-group mb-3">
-    <div class="input-group-prepend">
-    <span class="input-group-text">Télécharger</span>
-    </div>
+        <div class="input-group-prepend">
+            <span class="input-group-text">Télécharger</span>
+        </div>
     <div class="custom-file">
-    <input type="file" class="custom-file-input" name="file" id="file" accept=".doc,.docx, application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document, pdf">
-    <label class="custom-file-label" for="file">Choisir un fichier</label>
+        <input type="file" class="custom-file-input" name="file" id="file" accept=".doc,.docx, application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document, pdf">
+        <label class="custom-file-label" for="file">Choisir un fichier</label>
     </div>
     </div>
     <div class="form-check form-check-inline">
-    <input class="form-check-input" type="checkbox" id="pin" name="pin">
-    <label class="form-check-label" for="pin">Cocher la case pour épingler l'article</label>
+        <input class="form-check-input" type="checkbox" id="pin" name="pin">
+        <label class="form-check-label" for="pin">Cocher la case pour épingler l'article</label>
     </div>
     <div class="col-md-4">
-    <input class='btn btn-primary' type='submit' value='Envoyer'>
+        <input class='btn btn-primary' type='submit' value='Envoyer'>
     </div>
 </form>
 

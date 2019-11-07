@@ -19,14 +19,14 @@ class Post{
         $this->file = $file;
         $this->pin = $pin;
     }
-    //Create
+    // La fonction create permet d'insérer les données dans la table post.
     public function create(){
         require 'db.php';
         $req = $db->prepare("INSERT INTO post VALUES (NULL, ?, ?, ?, ?, ?, ?, ?)");
         $req->execute(array($this->category->getId(), $this->title, $this->content, $this->datePost, $this->picture, $this->file, $this->pin));
     }
 
-    //Retrieve
+    // La fonction retrieve 
     public function retrieve($id){
         require 'db.php';
         require_once 'category.php';
@@ -193,8 +193,6 @@ class Post{
     }
     return $mesPosts;
 }
-
-
 
     //GETTERS & SETTERS
 

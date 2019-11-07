@@ -12,11 +12,11 @@
                 <h2>
                     404 Not Found / 404 Page non trouvé</h2>
                 <div class="error-details">
-                    Sorry, an error has occured, Requested page not found! / Désolé une erreur s'est produite, la page demandé n'existe pas !
+                    Désolé une erreur s'est produite, la page demandé n'existe pas ! / Sorry, an error has occured, Requested page not found! 
                 </div>
                 <div class="error-actions">
                     <a href="/" class="btn btn-primary btn-lg"><span class="glyphicon glyphicon-home"></span>
-                        Return to home / Revenir sur home</a>
+                        Page précèdente / Return to home</a>
                 </div>
             </div>
         </div>

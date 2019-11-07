@@ -43,6 +43,10 @@
 			<input type="file" class="custom-file-input" accept=".doc,.docx, application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document, pdf" name="file" id="file" value='<?= $monObjet->getFile() ?>'>
 			<label class="custom-file-label" for="file">Choisir un fichier</label>
 		</div>
+		<div class="form-check form-check-inline">
+        <input class="form-check-input" type="checkbox" id="pin" name="pin">
+        <label class="form-check-label" for="pin">Cocher la case pour épingler l'article</label>
+    </div>
 	</div>
 		<!-- Cache l'ID aux utilisateurs mais est utile pour modifier cette article -->
 		<input type='text' name='id' value='<?= $monObjet->getId() ?>' hidden>

@@ -9,8 +9,8 @@
 			<th>Contenu de l'Article</th>
 			<th>Date de l'Article</th>
 			<th>Photo de l'Article</th>
-			<th>Fichier</th>
-			<th>Epingler</th>
+			<th>Fichier Téléchargé</th>
+			<th>Activer</th>
 			<th></th>
 		</tr>
 	</thead>

@@ -1,3 +1,21 @@
+/* Aide pour le débug des cadres */
+
+.debugblue {
+    border: solid 2px blue;
+}
+
+.debugred {
+    border: solid 2px red;
+}
+
+.debugblack {
+    border: solid 2px black;
+}
+
+.debuggreen {
+    border: solid 2px green;
+}
+
 *{
     margin: auto;
     padding: auto;
@@ -21,8 +39,6 @@ html {
     justify-content: center;
 }
 
-/* Début de l'En tête */
-
 /* Container qui va inclure toute notre page */
 
 .container {
@@ -37,6 +53,13 @@ img {
     max-height: 100%;
 }
 
+.img_article {
+    padding: 15px 15px;
+    height: 13em;
+
+}
+
+
 .container_header{
     background-color: black;
 }
@@ -45,25 +68,7 @@ img {
     background-color: lightgrey;
 }
 
-/* Aide pour le débug des cadres */
-
-.debugblue {
-    border: solid 2px blue;
-}
-
-.debugred {
-    border: solid 2px red;
-}
-
-.debugblack {
-    border: solid 2px black;
-}
-
-.debuggreen {
-    border: solid 2px green;
-}
-
-/* Bouton du menu */
+/* Entête : style des boutons du menu */
 
 .btn{
     border: #009DDF;
@@ -77,6 +82,14 @@ img {
     background-color: #0969AD!important;
 }
 
+.btn-secondary{
+    color:yellow;
+}
+
+.dropdown btn-outline-success btn btn-primary{
+    padding:-15px;
+}
+
 .btn-outline-success a{
     text-decoration: none;
     color: yellow;
@@ -88,7 +101,6 @@ img {
     background-color: #28a745;
     border-color: #28a745;
 }
-
 
 .btn-outline-success:focus, .btn-outline-success.focus {
     box-shadow: 0 0 0 0.2rem #009DDF;
@@ -111,15 +123,52 @@ border-color: #009DDF;
 box-shadow: 0 0 0 0.2rem #009DDF;
 }
 
-/* Page formaddalerte */
+/* Menu drop down Catégories */
+
+.dropdown{
+    margin: 0px;    
+}
+
+.dropdown-parent {		/* Réécrit le CSS Bootstrap */
+	min-width: 6.5rem !important;
+	padding: 0 !important;
+	background-color: #EFF3E1 !important;
+	background-clip: unset !important;
+	border: none !important;
+
+}
+
+#company-link {
+	padding-top: 8px !important;
+	padding-right: 0.5rem !important;
+	padding-left: 0.5rem !important;
+}
+
+#company-link:focus, #company-link:hover {  /* Réécrit le CSS Bootstrap  */
+	background-color: transparent !important;
+}
+
+.dropdown-child {
+	padding-top: 5px !important;
+	padding-right: 0.5rem !important;
+	padding-left: 0.5rem !important;
+	border-top: 1px solid rgba(127, 234, 195, 0.7) !important;
+	border-left: none !important;
+	border-right: none !important;
+	border-bottom: none !important;
+	border-radius: 0px !important;
+}
+
+/* Page formulaire */
 .formaddalert{
     width: 100%;
 }
 
-/* Fin de l'En-tête */
-
-
 /* Menu Burger pour la version mobile */
+
+.navbar {
+    border-radius: 0;
+}
 
 .nav-wrapper {
 	width: 80%;
@@ -158,43 +207,7 @@ box-shadow: 0 0 0 0.2rem #009DDF;
 	font-size: 25px;
 }
 
-.dropdown-parent {		/* Overriding Bootstrap CSS */
-	min-width: 6.5rem !important;
-	padding: 0 !important;
-	background-color: #EFF3E1 !important;
-	background-clip: unset !important;
-	border: none !important;
-
-}
-
-#company-link {
-	padding-top: 8px !important;
-	padding-right: 0.5rem !important;
-	padding-left: 0.5rem !important;
-}
-
-#company-link:focus, #company-link:hover {  /* Overriding Bootstrap CSS */
-	background-color: transparent !important;
-}
-
-.dropdown-child {
-	padding-top: 5px !important;
-	padding-right: 0.5rem !important;
-	padding-left: 0.5rem !important;
-	border-top: 1px solid rgba(127, 234, 195, 0.7) !important;
-	border-left: none !important;
-	border-right: none !important;
-	border-bottom: none !important;
-	border-radius: 0px !important;
-}
-
-/* Fin Menu Burger pour la version mobile*/
-
 /*Début Carousel */
-
-.carousel{
-    height: 10em;
-}
 
 .titre_carousel{
     margin-left: 35%;
@@ -204,8 +217,15 @@ box-shadow: 0 0 0 0.2rem #009DDF;
     height: 25em;
 }
 
+.card-img-top img {
+    max-width: 100%;
+    height: auto;
+}
+
 .card-img-top{
-    padding: 15px 0;
+    padding: 8em 0;
+    width: 18em;
+    height: 13em;
 }
 
 .carousel-control.left{
@@ -217,8 +237,6 @@ box-shadow: 0 0 0 0.2rem #009DDF;
     background-color:#0969AD;
     opacity: 0.24;
 }
-
-/*Fin Carousel */
 
 /*Début Bandeau des alertes */
 
@@ -244,8 +262,6 @@ box-shadow: 0 0 0 0.2rem #009DDF;
     background-color:transparent; 
 }
 
-/*Fin Bandeau des alertes */
-
 .navbar-brand {
     margin: 0;
     padding: 0;
@@ -256,6 +272,18 @@ box-shadow: 0 0 0 0.2rem #009DDF;
     margin:1em;
 }
 
-.error-template {padding: 40px 15px;text-align: center;}
-.error-actions {margin-top:15px;margin-bottom:15px;}
-.error-actions .btn { margin-right:10px; }
+/* Style de la page error.php */
+
+.error-template {
+    padding: 40px 15px;
+    text-align: center;
+}
+
+.error-actions {
+    margin-top:15px;
+    margin-bottom:15px;
+}
+
+.error-actions .btn { 
+    margin-right:10px; 
+}

@@ -74,6 +74,8 @@ img {
     background-color: #009DDF!important;
 }
 
+.btn
+
 .btn-outline-success a{
     text-decoration: none;
     color: yellow;
@@ -136,9 +138,6 @@ box-shadow: 0 0 0 0.2rem #009DDF;
     color: #FFFFFF;
 }
 
-
-
-
 .table thead th.fit {
     vertical-align: none;
 }
@@ -147,3 +146,21 @@ box-shadow: 0 0 0 0.2rem #009DDF;
     vertical-align: middle;
 }
 
+
+/* Permet d'afficher la date sous IE11 */
+
+input[type="date"]::before {
+	color: #999999;
+	content: attr(placeholder);
+}
+input[type="date"] {
+	color: #ffffff;
+}
+input[type="date"]:focus,
+input[type="date"]:valid {
+	color: #666666;
+}
+input[type="date"]:focus::before,
+input[type="date"]:valid::before {
+	content: "" !important;
+}

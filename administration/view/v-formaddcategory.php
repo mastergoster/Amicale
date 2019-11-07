@@ -17,7 +17,7 @@
 					foreach($mesIcones as $icone)
 					{
 						//echo "<option value='".$icone->getId()."'>".$icone->getIcons()."</option>";
-						echo "<option data-content='<i class='".$icone->getCodef()."'></i>".$icone->getCodef()."</option>"
+						echo "<option data-content='".$icone->getCodef()."'>".$icone->getCodef()."</option>"
 						;
 						echo " <i class='fab fa-accessible-icon' style='font-size:24px'></i>";
 					}
