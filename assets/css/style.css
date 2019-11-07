@@ -287,3 +287,8 @@ box-shadow: 0 0 0 0.2rem #009DDF;
 .error-actions .btn { 
     margin-right:10px; 
 }
+
+.card-hor{
+    padding: 119px 15px;
+
+}

@@ -48,7 +48,7 @@ echo "
 </div>";
 foreach($mesHoraires as $horaire){
     echo "
-    <div class=''>Horaire d'ouverture de l'amicale : <br> 18 Avenue du 8 Mai 1945  <br> 03100 Montluçon     <p>".$horaire->getContent()."</p></div>
+    <div class='card card-hor'>Horaire d'ouverture de l'amicale : <br> 18 Avenue du 8 Mai 1945  <br> 03100 Montluçon     <p>".$horaire->getContent()."</p></div>
 
 
     ";
@@ -86,7 +86,6 @@ foreach($mesHoraires as $horaire){
                     ".$post->getContent()."
 
                     ".substr(strip_tags($post->getContent()), 0, 130). "<div onclick='showhide(".$counter.")'>  <div class='read_next'>...  Fermer l'article</div></div>
-
                 </div>
                 <p><a href='../assets/uploads/file/".$post->getFile()."'>".$post->getFile()."</a></p>
                 <p class='card-text'><small class='text-muted'>".date('d/m/Y', strtotime($post->getDatePost()))."</small></p>

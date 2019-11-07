@@ -9,7 +9,7 @@
         $monMessage = $monAlerte->showAlert();
 
         $page = isset($_GET['p'])?($_GET['p']):(1);
-        $limit = 5;
+        $limit = 35;
         $offsetDebut = ($page-1) * $limit;
         //$offsetFin = ($page) * $limit;
 
