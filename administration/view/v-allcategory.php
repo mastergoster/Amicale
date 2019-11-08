@@ -1,5 +1,5 @@
 <br>
-    <div class="test" style='text-align: center'><a href='index.php?action=formaddcategory' class="btn btn-secondary">Ajouter une Catégorie / Article</a></div>
+    <div class="test" style='text-align: center'><a href='index.php?action=formaddcategory' class="btn btn-secondary">Ajouter une Catégorie</a></div>
 <br>
 
 <table class="table table-bordered table-striped col-md-4 col-md-offset-4">

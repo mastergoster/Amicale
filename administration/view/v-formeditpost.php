@@ -10,17 +10,17 @@
                 ?>
             </select>
 		</div>
-        <div class="form-group col-md-4 col-md-offset-4">
+        <div class="form-group col-md-4 col-md-offset-6">
 			<label for="title">Titre de l'Article :</label>
-            <input type='text' name='title' value='<?= $monObjet->getTitle() ?>'>
+            <input type='text' name='title' size='30' value='<?= $monObjet->getTitle() ?>'>
 		</div>
         <div class="form-group col-md-4 col-md-offset-4">
 			<label for="content">Contenu de l'Article :</label>
-			<textarea type='text' name='content'><?= $monObjet->getContent() ?></textarea>
+			<textarea type='text' rows ='6'cols='30' name='content'><?= $monObjet->getContent() ?></textarea>
 		</div>
         <div class="form-group col-md-4 col-md-offset-4">
 			<label for="datepost">Date de l'Article :</label>
-			<input type='text' name='datepost' value='<?= $monObjet->getDatePost() ?>'>
+			<input type='text' name='datepost' size='30' value='<?= $monObjet->getDatePost() ?>'>
 		</div>
 		<div class="picture col-md-4 col-md-offset-4">
 		<label for="picture">Photo de l'Article (jpg, jpeg, png, gif):</label>

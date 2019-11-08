@@ -50,7 +50,6 @@ foreach($mesHoraires as $horaire){
     echo "
     <div class='card card-hor'>Horaire d'ouverture de l'amicale : <br> 18 Avenue du 8 Mai 1945  <br> 03100 Montluçon     <p>".$horaire->getContent()."</p></div>
 
-
     ";
 }
 ?>
@@ -69,6 +68,8 @@ foreach($mesHoraires as $horaire){
     ";
 
     // Affichage des posts
+
+    // permet de mettre un id diffèrent pour chaque article
     $counter=0;
     
     foreach($mesPosts as $post)
@@ -99,7 +100,7 @@ foreach($mesHoraires as $horaire){
 
 echo "</div>";
 
-    // Affiche le nombre de pagination (4)
+    // Affiche le nombre de pagination (6)
 
     //var_dump($page);
     //var_dump($start);die();
@@ -150,16 +151,18 @@ echo "</div>";
 
 function showhide(counter) 
 {
-
+    // crée la variable #
     var preview='#preview'+counter;
     var scrollcontent='#scrollcontent'+counter;
     var buttonarticle='#buttonarticle'+counter;
 
+    // vérifie s'il est visible
     if ($(preview).is(":visible"))
-    {
-        $(preview).hide();
-        $(buttonarticle).show();
-        $(scrollcontent).show();
+    {  
+        // quand il est visible
+        $(preview).hide(); // je cache preview 
+        $(buttonarticle).show(); // j'affiche le button article
+        $(scrollcontent).show(); // j'affiche le scrollcontent
     }else{
         $(preview).show();
         $(buttonarticle).hide();

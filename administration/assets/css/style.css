@@ -65,13 +65,13 @@ img {
 }
 
 .bg-light{
-    background-color: #009DDF!important;
+    background-color: #0969AD!important;
 }
 
 /* Début de modification des boutons dans le BO */
 
 .btn-primary{
-    background-color: #009DDF!important;
+    background-color: #0969AD!important;
 }
 
 .btn
@@ -134,7 +134,7 @@ box-shadow: 0 0 0 0.2rem #009DDF;
     position: absolute;
     bottom: 0;
     width: 100%;
-    background: #009DDF;
+    background: #0969AD;
     color: #FFFFFF;
 }
 
