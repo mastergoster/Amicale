@@ -80,6 +80,7 @@ img {
 
 .btn-secondary{
     color:yellow;
+    background-color: #0969AD;
 }
 
 .btn-outline-success a{
@@ -169,6 +170,8 @@ input[type="date"]:focus::before,
 input[type="date"]:valid::before {
 	content: "" !important;
 }
+
+/* Permet de centrer la case à cocher dans formaddpost et formeditpost*/
 
 .checkedcenter{
     display: grid;

@@ -12,16 +12,16 @@
             <a class="btn btn-outline-success btn btn-primary btn-secondary" href="index.php?action=home">Accueil</a>
         </form>
         <form class="form-inline">
-            <a class="btn btn-outline-success btn btn-primary btn-secondary" href="index.php?action=allalerte">Alertes</a>
+            <a class="btn btn-outline-success btn btn-primary btn-secondary" href="index.php?action=allalerte">Les alertes</a>
         </form>
         <form class="form-inline">
             <a class="btn btn-outline-success btn btn-primary btn-secondary" href="index.php?action=allcategory">Articles & Catégories</a>
         </form>
         <form class="form-inline">
-            <a class="btn btn-outline-success btn btn-primary btn-secondary" href="index.php?action=allhoraire">Horaires</a>
+            <a class="btn btn-outline-success btn btn-primary btn-secondary" href="index.php?action=allhoraire">Les horaires</a>
         </form>
         <form class="form-inline">
-            <a class="btn btn-outline-success btn btn-primary btn-secondary" href="index.php?action=allusers">Utilisateurs</a>
+            <a class="btn btn-outline-success btn btn-primary btn-secondary" href="index.php?action=allusers">Les utilisateurs</a>
 
         </form>
             <form class="form-inline">

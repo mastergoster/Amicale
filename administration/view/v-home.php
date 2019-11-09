@@ -24,7 +24,8 @@
 				echo '<tr><td>'.$post->getTitle().'</td>';
 				echo '<td>'.substr(strip_tags($post->getContent()), 0, 130).'...</td>';
 				echo '<td>'.$post->getDatePost().'</td>';
-				echo '<td><i class="fas fa-image"></i></td>';
+				echo '<td><img src=../assets/uploads/picture/'.$post->getPicture().'></td>';
+
 
 				echo '<td>'.$post->getPin().'</td>';
 				
