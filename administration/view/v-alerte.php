@@ -20,7 +20,7 @@
 					echo '<td>'.$alerte->getMessage().'</td>';
 					echo '<td>'.$alerte->getIsActive().'</td>';					
 					echo '<td><a href="index.php?action=formeditalerte&id='.$alerte->getId().'"><i class="far fa-edit"></i></a></td>';
-					echo '<td><a href="index.php?action=delalerte&id='.$alerte->getId().'&category='.$category.'"><i class="far fa-trash-alt"></i></a></td></tr>';
+					echo '<td><a href="index.php?action=delalerte&id='.$alerte->getId().'"><i class="far fa-trash-alt"></i></a></td></tr>';
 				}
 				if(count($mesAlertes) == 0)
 				{

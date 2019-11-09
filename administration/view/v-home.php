@@ -10,9 +10,9 @@
 			<th>Contenue</th>
 			<th>Date</th>
 			<th>Photo</th>
-			<th>Fichier</th>
 			<th>Activer</th>
-			<th></th>
+			<th>Modifier</th>
+			<th>Supprimer</th>
 		</tr>
 	</thead>
 	<tbody>
@@ -24,11 +24,12 @@
 				echo '<tr><td>'.$post->getTitle().'</td>';
 				echo '<td>'.substr(strip_tags($post->getContent()), 0, 130).'...</td>';
 				echo '<td>'.$post->getDatePost().'</td>';
-				echo '<td>'.$post->getPicture().'</td>';
-				echo '<td><i class="fas fa-download"></i></td>';
+				echo '<td><i class="fas fa-image"></i></td>';
+
 				echo '<td>'.$post->getPin().'</td>';
 				
-				echo '<td><a href="index.php?action=formeditpost&id='.$post->getId().'"><i class="far fa-edit"></i></a>&nbsp;&nbsp;&nbsp; <a href="index.php?action=delpost&id='.$post->getId().'&category='.$post->getCategory()->getId().'"><i class="far fa-trash-alt"></i></a></td></tr>';
+				echo '<td><a href="index.php?action=formeditpost&id='.$post->getId().'"><i class="far fa-edit"></i></a>
+						<td><a href="index.php?action=delpost&id='.$post->getId().'&category='.$post->getCategory()->getId().'"><i class="far fa-trash-alt"></i></a></td></tr>';
 			}
 			if(count($mesPosts) == 0)
 			{

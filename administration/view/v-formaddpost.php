@@ -22,7 +22,7 @@ foreach($mesCategory as $category)
 
     <div class="form-group col-md-4">
         <label for="datepost">Date de l'Article :</label>
-        <input type="date" placeholder="jj/mm/aaaa" class="form-control" name="datepost" id="datepost" required>
+        <input type="date" placeholder="aaaa/mm/jj" class="form-control" name="datepost" id="datepost" required>
     </div>
 
 <div class="picture col-md-6">
@@ -50,9 +50,11 @@ foreach($mesCategory as $category)
         <label class="custom-file-label" for="file">Choisir un fichier</label>
     </div>
     </div>
-    <div class="form-check form-check-inline">
-        <input class="form-check-input" type="checkbox" id="pin" name="pin">
-        <label class="form-check-label" for="pin">Cocher la case pour épingler l'article</label>
+    <div class="checkedcenter">
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="checkbox" id="pin" name="pin">
+            <label class="form-check-label" for="pin">Cocher la case pour épingler l'article</label>
+        </div>
     </div>
     <div class="col-md-4">
         <input class='btn btn-primary' type='submit' value='Envoyer'>

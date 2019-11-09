@@ -3,14 +3,14 @@
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
-            <form class="form-inline">
-                <button class="btn btn-outline-success btn btn-primary" type="button"><a href="index.php?action=home">Accueil</a></button>
+        <form class="form-inline">
+                <a class="btn btn-outline-success btn btn-primary btn-secondary" href="index.php?action=home"><i class="fas fa-home"></i>Accueil</a>
             </form>
             <form class="form-inline">
-                <button class="btn btn-outline-success btn btn-primary" type="button"><a href="index.php?action=allalerte">Présentation des produits</a></button>
+                <a class="btn btn-outline-success btn btn-primary btn-secondary" href="index.php?action=allalerte">Présentation des produits</a>
             </form>
             <form class="form-inline">
-                <button class="btn btn-outline-success btn btn-primary" type="button"><a href="index.php?action=allcategory">Contact</a></button>
+                <a class="btn btn-outline-success btn btn-primary btn-secondary" href="index.php?action=allcategory">Contact</a>
             </form>
 
             <div class="dropdown btn-outline-success btn btn-primary">

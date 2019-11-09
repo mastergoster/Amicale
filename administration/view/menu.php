@@ -9,23 +9,23 @@
         </form> 
         <div class="collapse navbar-collapse" id="navbarNav">
         <form class="form-inline">
-            <button class="btn btn-outline-success btn btn-primary" type="button"><a href="index.php?action=home">Accueil</a></button>
+            <a class="btn btn-outline-success btn btn-primary btn-secondary" href="index.php?action=home">Accueil</a>
         </form>
         <form class="form-inline">
-            <button class="btn btn-outline-success btn btn-primary" type="button"><a href="index.php?action=allalerte">Alertes</a></button>
+            <a class="btn btn-outline-success btn btn-primary btn-secondary" href="index.php?action=allalerte">Alertes</a>
         </form>
         <form class="form-inline">
-            <button class="btn btn-outline-success btn btn-primary" type="button"><a href="index.php?action=allcategory">Catégories</a></button>
+            <a class="btn btn-outline-success btn btn-primary btn-secondary" href="index.php?action=allcategory">Articles & Catégories</a>
         </form>
         <form class="form-inline">
-            <button class="btn btn-outline-success btn btn-primary" type="button"><a href="index.php?action=allhoraire">Horaires</a></button>
+            <a class="btn btn-outline-success btn btn-primary btn-secondary" href="index.php?action=allhoraire">Horaires</a>
         </form>
         <form class="form-inline">
-            <button class="btn btn-outline-success btn btn-primary" type="button"><a href="index.php?action=allusers">Utilisateurs</a></button>
+            <a class="btn btn-outline-success btn btn-primary btn-secondary" href="index.php?action=allusers">Utilisateurs</a>
+
         </form>
             <form class="form-inline">
-            <button type="button" class="btn btn-outline-success btn btn-primary"><a href="index.php?action=logout"><i class="fas fa-sign-out-alt"></i></a>
-            </button>  
+            <a class="btn btn-outline-success btn btn-primary btn-secondary" href="index.php?action=logout"><i class="fas fa-sign-out-alt"></i></a>
         </form>  
         
         </div>

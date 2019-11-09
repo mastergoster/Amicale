@@ -37,7 +37,7 @@
 
             $this->id= $result['id'];
             $this->codef= $result['codef'];
-            var_dump($codef);
+
         }
 
         public function update()

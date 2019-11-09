@@ -26,7 +26,7 @@
                             }
                                 echo "
 
-                            <img class='card-img-top' src='../assets/uploads/picture/".$post->getPicture()."' alt='Card image' >
+                            <img class='card-img-top' src='assets/uploads/picture/".$post->getPicture()."' alt='Card image' >
                 </div>";
                     
                 }
@@ -77,7 +77,7 @@ foreach($mesHoraires as $horaire){
         echo "
         
         <div class='card col-md-8' style='width: 28%; margin: 25px;'>
-            <img class='img_article' src='../assets/uploads/picture/".$post->getPicture()."' alt='Card image' style='width:100%'>
+            <img class='img_article' src='assets/uploads/picture/".$post->getPicture()."' alt='Card image' style='width:100%'>
             <div class='card-body'>
                 <h4 class='card-title '>".$post->getTitle()."</h4>
                 <div id='preview".$counter."'>
@@ -88,7 +88,7 @@ foreach($mesHoraires as $horaire){
 
                     ".substr(strip_tags($post->getContent()), 0, 130). "<div onclick='showhide(".$counter.")'>  <div class='read_next'>...  Fermer l'article</div></div>
                 </div>
-                <p><a href='../assets/uploads/file/".$post->getFile()."'>".$post->getFile()."</a></p>
+                <p><a href='assets/uploads/file/".$post->getFile()."'>".$post->getFile()."</a></p>
                 <p class='card-text'><small class='text-muted'>".date('d/m/Y', strtotime($post->getDatePost()))."</small></p>
 
             </div>

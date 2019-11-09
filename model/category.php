@@ -13,11 +13,10 @@ class Category {
         $this->name= $name;
     }
 
-
     public function create(){
         require 'db.php';
         
-        $req = $db->prepare("INSERT INTO X'category' VALUES(null, ?, ?, ?);");
+        $req = $db->prepare("INSERT INTO category VALUES(null, null, null, ?);");
         
         // $alerte = ($this->alerte !='')?($this->alerte->getId()):(NULL); est équivalent au if ci-après
 
@@ -26,7 +25,7 @@ class Category {
         }else{
             $alerte = NULL;
         }
-        $req->execute(array($this->codef->getId(), $alerte, $this->name));
+        $req->execute(array($this->name));
     }
 
     public function retrieve($id){

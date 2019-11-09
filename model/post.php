@@ -176,6 +176,12 @@ class Post{
             $req->execute(array($file, $id));
         }
         
+    public function fileDelete($id)
+    {
+        require 'db.php';
+        $req = $db->prepare("UPDATE post SET `file` = '' WHERE id = ? ");
+        $req->execute(array($id));
+    }
 
     //FindAllByPin
     public static function findAllByPin()
@@ -192,6 +198,8 @@ class Post{
             array_push($mesPosts, $monPost);
     }
     return $mesPosts;
+
+
 }
 
     //GETTERS & SETTERS

@@ -12,7 +12,7 @@
         <link rel="stylesheet" href="//cdn.datatables.net/1.10.20/css/jquery.dataTables.min.css" />
 
         <link rel="stylesheet" href="assets/css/style.css">
-        <link rel="stylesheet" href="assets/css/style1280.css" />
+        <link rel="stylesheet" href="assets/css/styles.scss" />
     </head>
     <body>
         <header>

@@ -32,7 +32,6 @@
     padding: auto;
 }
 
-
 html {
     position: relative;
     min-height: 100%;
@@ -60,6 +59,11 @@ img {
     background-color: lightgrey;
 }
 
+.button_send{
+    margin: 3em;
+    text-align:center;
+}
+
 .btn{
     border: #009DDF;
 }
@@ -74,7 +78,9 @@ img {
     background-color: #0969AD!important;
 }
 
-.btn
+.btn-secondary{
+    color:yellow;
+}
 
 .btn-outline-success a{
     text-decoration: none;
@@ -117,7 +123,6 @@ box-shadow: 0 0 0 0.2rem #009DDF;
 
 /* ----------------------------- */
 
-
 .categorymanage{
     display:flex;
     justify-content: space-between;
@@ -131,11 +136,11 @@ box-shadow: 0 0 0 0.2rem #009DDF;
 /* ----------------------------- */
 
 .footer {
-    position: absolute;
     bottom: 0;
+    position: absolute;
     width: 100%;
     background: #0969AD;
-    color: #FFFFFF;
+    color: yellow;
 }
 
 .table thead th.fit {
@@ -163,4 +168,9 @@ input[type="date"]:valid {
 input[type="date"]:focus::before,
 input[type="date"]:valid::before {
 	content: "" !important;
+}
+
+.checkedcenter{
+    display: grid;
+    justify-content: center;
 }

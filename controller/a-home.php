@@ -31,7 +31,7 @@ require_once 'model/horaire.php';
         $mesPins = Post::findAllByPin();
         $nbPage = ceil($nbPost / $limit);
 
-        if($page >= $nbPage){
+        if($page >= $nbPage && $nbPage != 0){
                 $page= $nbPage-1;
 
                 header('Location: index.php?action=home&p='.$page);
@@ -41,16 +41,6 @@ require_once 'model/horaire.php';
         }
 
         $mesHoraires = Horaire::findAll();
-        $nbPage = ceil($nbPost / $limit);
-
-        if($page >= $nbPage){
-                $page= $nbPage-1;
-
-                header('Location: index.php?action=home&p='.$page);
-        }elseif($page < 0)
-        {
-                header('Location: index.php?action=home');
-        }
 
 $view = 'home';
 

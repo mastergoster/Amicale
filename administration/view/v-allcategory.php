@@ -1,13 +1,16 @@
 <br>
-    <div class="test" style='text-align: center'><a href='index.php?action=formaddcategory' class="btn btn-secondary">Ajouter une Catégorie</a></div>
+    <div class="test" style='text-align: center'><a href="index.php?action=formaddcategory" class="btn btn-secondary">Ajouter une Catégorie</a></div>
+<br>
+<br>
+    <div class="test" style='text-align: center'><a href="index.php?action=formaddpost" class="btn btn-secondary">Ajouter un Article</a></div>
 <br>
 
 <table class="table table-bordered table-striped col-md-4 col-md-offset-4">
     <thead>
         <tr>
             <th>Nom des catégories</th>
-            <th>Ajouter un Article</th>
-            <th>Modification</th>
+            <th>Modifier un Article</th>
+            <th>Modification de la Catégorie</th>
             <th>Suppression</th>
 
         </tr>

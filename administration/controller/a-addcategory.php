@@ -7,14 +7,14 @@
                 $name = htmlspecialchars($_POST["name"]);
                 $codef = htmlspecialchars($_POST["codef"]);
 
-                require_once "../model/icons.php";
+                /*require_once "../model/icons.php";
                 $monIcone = new Icone();
-                $monIcone->retrieveByCodef($codef);
+                $monIcone->retrieveByCodef($codef);*/
 
                 require_once "../model/category.php";
-                $monObjet = new Category(0, $monIcone, null, $name);
+                $monObjet = new Category(0, null, null, $name);
                 $monObjet->create();
-            
+
                 header('Location: index.php?action=allcategory');
             }else{
                 // si pas admin, redirige vers home
