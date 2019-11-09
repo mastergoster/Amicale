@@ -47,8 +47,13 @@ html {
 
 /* Logo de l'Amicale */
 
+.logosize {
+    max-width: 33%;
+    height: auto;
+}
+
 img {
-    max-width: 45%;
+    max-width: 50%;
 }
 
 .container_header{

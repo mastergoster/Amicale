@@ -41,7 +41,8 @@ echo "
                                 echo "
 
                             <img class='card-img-top' src='assets/uploads/picture/".$post->getPicture()."' alt='Card image' >
-                </div>";
+                
+                            </div>";
                     
                 }
     echo " 

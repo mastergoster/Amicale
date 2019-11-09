@@ -1,6 +1,6 @@
 <div class="nav-wrapper">
 	<nav class="navbar navbar-expand-lg bg-light navbar-toggleable-xs navbar-toggleable-sm navbar-toggleable-md">
-    <a href=""><img src="assets/images/logo amicale sans fond Modif.png" alt="Logo Amicale" class="img-circle img-responsive"></a>    
+    <a href=""><img class="logosize" src="assets/images/logo amicale sans fond Modif.png" alt="Logo Amicale" class="img-circle img-responsive"></a>    
 
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"><span class="navbar-toggler-icon"><i class="fas fa-bars"></i></span>
         </button>

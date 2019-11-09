@@ -49,9 +49,11 @@ html {
 /* Logo de l'Amicale */
 
 .logosize{
-max-width: 100%;
-height: auto;
+    max-width: 100%;
+    height: auto;
 }
+
+/* Image article */
 
 img {
     max-width: 100%;
@@ -62,6 +64,8 @@ img {
     padding: 15px 15px;
     height: 13em;
 }
+
+/* container */
 
 .container_header{
     background-color: black;
@@ -213,6 +217,11 @@ box-shadow: 0 0 0 0.2rem #009DDF;
 }
 
 /*Début Carousel */
+
+.carousel {
+    height: 25em;
+    vertical-align: middle;
+}
 
 .titre_carousel{
     margin-left: 35%;
