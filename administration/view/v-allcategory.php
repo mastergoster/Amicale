@@ -11,7 +11,7 @@
             <th>Nom des catégories</th>
             <th>Modifier un Article</th>
             <th>Modification de la Catégorie</th>
-            <th>Suppression</th>
+            <th>Suppression de la Catégorie</th>
 
         </tr>
     </thead>

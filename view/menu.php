@@ -6,13 +6,6 @@
         <form class="form-inline">
                 <a class="btn btn-outline-success btn btn-primary btn-secondary" href="index.php?action=home"><i class="fas fa-home"></i>Accueil</a>
             </form>
-            <form class="form-inline">
-                <a class="btn btn-outline-success btn btn-primary btn-secondary" href="index.php?action=allalerte">Présentation des produits</a>
-            </form>
-            <form class="form-inline">
-                <a class="btn btn-outline-success btn btn-primary btn-secondary" href="index.php?action=allcategory">Contact</a>
-            </form>
-
             <div class="dropdown btn-outline-success btn btn-primary">
                 <button class="btn btn-secondary dropdown-toggle navbar-expand-lg navbar-light bg-light style='color: yellow;'" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Catégories</button>
                 <div class="dropdown-menu navbar-expand-lg navbar-light bg-light aria-labelledby="dropdownMenuButton">

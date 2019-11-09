@@ -5,13 +5,14 @@
 <table class="col-md-8 col-md-offset-4 table table-bordered table-striped">
 	<thead>
 		<tr>
-			<th>Titre de l'Article</th>
-			<th>Contenu de l'Article</th>
-			<th>Date de l'Article</th>
-			<th>Photo de l'Article</th>
+			<th>Titre</th>
+			<th>Contenu</th>
+			<th>Date</th>
+			<th>Photo</th>
 			<th>Fichier Téléchargé</th>
 			<th>Activer</th>
-			<th></th>
+			<th>Modifier</th>
+			<th>Supprimer</th>
 		</tr>
 	</thead>
 	<tbody>
@@ -26,12 +27,13 @@
 				echo '<td>'.$post->getPicture().'</td>';
 				echo '<td>'.$post->getFile();
 				if ($post->getFile() != ""){
-					echo '<a href="index.php?action=deletefile&id='.$post->getId().'">x</a>';
+					echo '<a href="index.php?action=deletefile&id='.$post->getId().'"> <i class="far fa-trash-alt"></i></a>';
 				}
 				echo '</td>';
 				echo '<td>'.$post->getPin().'</td>';
 				
-				echo '<td><a href="index.php?action=formeditpost&id='.$post->getId().'"><i class="far fa-edit"></i></a>&nbsp;&nbsp;&nbsp; <a href="index.php?action=delpost&id='.$post->getId().'&category='.$post->getCategory()->getId().'"><i class="far fa-trash-alt"></i></a></td></tr>';
+				echo '<td><a href="index.php?action=formeditpost&id='.$post->getId().'"><i class="far fa-edit"></i></a>';
+				echo '<td><a href="index.php?action=delpost&id='.$post->getId().'&category='.$post->getCategory()->getId().'"><i class="far fa-trash-alt"></i></a></td></tr>';
 			}
 			if(count($mesPosts) == 0)
 			{

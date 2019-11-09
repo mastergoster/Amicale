@@ -71,6 +71,8 @@ img {
 
 .btn{
     border: #009DDF;
+    margin-bottom: 0;
+    font-size: 17px;
 }
 
 .bg-light{
@@ -290,7 +292,7 @@ box-shadow: 0 0 0 0.2rem #009DDF;
 }
 
 .card-hor{
-    padding: 24px 15px;
+    padding: 36px 15px;
 
 }
 
