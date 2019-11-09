@@ -1,4 +1,18 @@
-<?php echo "
+<?php
+
+    // Affichage du bandeau des alertes
+    echo " 
+    <div id='cadrpg'> 
+    <br>
+        <div class='defiletext' id='newshr'>
+            <a style='width:100%' id='defile' >
+            $monMessage</a>
+        </div>
+    </div>
+
+    ";
+
+echo "
     <div class='carousel slide col-md-8' id='myCarousel' class='carousel slide' data-ride='carousel'>
         <!-- Indicators -->
             <ol class='carousel-indicators'>";
@@ -55,18 +69,6 @@ foreach($mesHoraires as $horaire){
 ?>
 
 <?php 
-    // Affichage du bandeau des alertes
-    echo " 
-    <div id='cadrpg'> 
-    <br>
-        <div class='' id='newshr'>
-            <a style='width:100%' id='defile' >
-            .$monMessage.</a>
-        </div>
-    </div>
-
-    ";
-
     // Affichage des posts
 
     // permet de mettre un id diffèrent pour chaque article
