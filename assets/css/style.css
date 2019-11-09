@@ -214,6 +214,7 @@ box-shadow: 0 0 0 0.2rem #009DDF;
 
 .carousel-inner{
     height: 25em;
+    margin: -75px 0;
 }
 
 .card-img-top img {
@@ -288,10 +289,10 @@ box-shadow: 0 0 0 0.2rem #009DDF;
 }
 
 .card-hor{
-    padding: 119px 15px;
+    padding: 24px 15px;
 
 }
 
 footer a:link {
     color: yellow;
-  }
+}
