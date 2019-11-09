@@ -22,7 +22,7 @@
 			foreach($mesPosts as $post)
 			{				
 				echo '<tr><td>'.$post->getTitle().'</td>';
-				echo '<td>'.substr(strip_tags($post->getContent()), 0, 130).'...</td>';
+				echo '<td>'.substr(strip_tags($post->getContent()), 0, 50).'...</td>';
 				echo '<td>'.$post->getDatePost().'</td>';
 				echo '<td><img src=../assets/uploads/picture/'.$post->getPicture().'></td>';
 

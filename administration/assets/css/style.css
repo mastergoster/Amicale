@@ -177,3 +177,11 @@ input[type="date"]:valid::before {
     display: grid;
     justify-content: center;
 }
+
+/* Page administration v-home */
+
+td {
+    text-align:center;
+    width: 25%;
+}
+
