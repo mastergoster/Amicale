@@ -53,6 +53,8 @@ function texteDefile() {
 setInterval("texteDefile()",20); // delai de deplacement 
 
 
+/* Datatable */
+
 $(document).ready( function () {
 	$('#myTable').DataTable({
 		"language": {

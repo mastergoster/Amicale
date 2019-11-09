@@ -48,7 +48,7 @@ echo "
 </div>";
 foreach($mesHoraires as $horaire){
     echo "
-    <div class='card card-hor'>Horaire d'ouverture de l'amicale : <br> 18 Avenue du 8 Mai 1945  <br> 03100 Montluçon     <p>".$horaire->getContent()."</p></div>
+    <div class='card card-hor'>Horaire d'ouverture de l'amicale : <br><br> 18 Avenue du 8 Mai 1945  <br> 03100 Montluçon <br><br><p>".$horaire->getContent()."</p></div>
 
     ";
 }
