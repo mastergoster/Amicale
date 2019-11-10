@@ -1,14 +1,14 @@
 <?php 
 class Category {
     private $id;
-    private $codef;
+    private $icons;
     private $alerte;
     private $name;
 
 
-    public function __construct($id='', $codef='', $alerte='', $name=''){
+    public function __construct($id='', $icons='', $alerte='', $name=''){
         $this->id = $id;
-        $this->codef= $codef;
+        $this->icons= $icons;
         $this->alerte = $alerte;
         $this->name= $name;
     }
@@ -55,13 +55,13 @@ class Category {
     public function update(){
         require 'db.php';
 
-        $req = $db->prepare("UPDATE category SET codef = ?, idalerte = ?, name = ?  WHERE id = ?");
+        $req = $db->prepare("UPDATE category SET idalerte = ?, name = ?  WHERE id = ?");
         if($this->alerte !=''){
-            $alerte = $this->alerte->getId();
+            $alerte = $this->alerte;
         }else{
             $alerte = NULL;
         }
-        $req->execute(array($this->codef->getId(), $alerte, $this->name, $this->id));
+        $req->execute(array($alerte, $this->name, $this->id));
     }
 
     public function delete($id){
@@ -174,26 +174,6 @@ class Category {
     public function setIcons($icons)
     {
         $this->icons = $icons;
-        return $this;
-    }
-
-    /**
-     * Get the value of codef
-     */ 
-    public function getCodef()
-    {
-        return $this->codef;
-    }
-
-    /**
-     * Set the value of codef
-     *
-     * @return  self
-     */ 
-    public function setCodef($codef)
-    {
-        $this->codef = $codef;
-
         return $this;
     }
 }
