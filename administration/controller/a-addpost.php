@@ -12,7 +12,7 @@ if(isset($_SESSION) && !empty($_SESSION['amicale']['auth']))
         $maCategory->retrieve($idcategory);
 
         $title = htmlspecialchars($_POST["title"]);
-        $content = htmlspecialchars($_POST["content"]);
+        $content = $_POST["content"];
         $datePost = htmlspecialchars($_POST["datepost"]);
         $pin = htmlspecialchars($_POST["pin"]);
         $pin = ($pin=="on")?(1):(0);

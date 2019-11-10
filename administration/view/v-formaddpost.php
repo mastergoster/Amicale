@@ -17,7 +17,7 @@
 
     <div class="form-group col-md-4">
         <label for="content">Contenu de l'Article :</label>
-        <textarea class="form-control" name="content" id="content" required ></textarea>
+        <textarea class="form-control" name="content" id="content" ></textarea>
     </div>
 
     <div class="form-group col-md-4">

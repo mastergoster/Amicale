@@ -12,7 +12,7 @@
 
 		$id = htmlspecialchars($_POST["id"]);
 		$title = htmlspecialchars($_POST["title"]);
-		$content = htmlspecialchars($_POST["content"]);		
+		$content = $_POST["content"];		
         $datePost = htmlspecialchars($_POST["datepost"]);
 		$picture = htmlspecialchars($_POST["picture"]);
 		$pictureOldName	= htmlspecialchars($_POST["pictureOldName"]);
