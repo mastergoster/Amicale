@@ -1,21 +1,13 @@
 <?php
-
     if(isset($_SESSION) && !empty($_SESSION['amicale']['auth']))
     {
-    require_once "../model/post.php";
-
+    require_once "../model/category.php";
     $id = $_GET["id"];
+    $monObjet = new Category();
+    $monObjet->delete($id);
 
-
-    $monObjet = new Post();
-    $monObjet->fileDelete($id);
-
-    header('Location: index.php?action=allpost');
-
+        header('Location: index.php?action=allcategory');
     }else{
-
-    header('Location: ../index.php?action=formlogin');
-    
+        header('Location: ../index.php?action=formlogin');    
     }
-
 ?>

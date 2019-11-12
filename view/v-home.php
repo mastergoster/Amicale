@@ -90,8 +90,14 @@ foreach($mesHoraires as $horaire){
                     ".$post->getContent()."
 
                     ".substr(strip_tags($post->getContent()), 0, 130). "<div onclick='showhide(".$counter.")'>  <div class='read_next'>...  Fermer l'article</div></div>
-                </div>
-                <p>Télécharger le fichier : <a href='assets/uploads/file/".$post->getFile()."'><i class='fas fa-download'></i></a></p>
+                </div>";
+
+                if($post->getFile() != ''){
+                
+                    echo "
+                    <p>Télécharger le fichier : <a href='assets/uploads/file/".$post->getFile()."'><i class='fas fa-download'></i></a></p>";
+                }
+                echo "
                 <p class='card-text'><small class='text-muted'>".date('d/m/Y', strtotime($post->getDatePost()))."</small></p>
 
             </div>

@@ -9,13 +9,13 @@
         </form> 
         <div class="collapse navbar-collapse" id="navbarNav">
         <form class="form-inline">
-            <a class="btn btn-outline-success btn btn-primary btn-secondary" href="index.php?action=home">Accueil</a>
+            <a class="btn btn-outline-success btn btn-primary btn-secondary" href="index.php?action=home">Les articles</a>
+        </form>
+        <form class="form-inline">
+            <a class="btn btn-outline-success btn btn-primary btn-secondary" href="index.php?action=allcategory">Les catégories</a>
         </form>
         <form class="form-inline">
             <a class="btn btn-outline-success btn btn-primary btn-secondary" href="index.php?action=allalerte">Les alertes</a>
-        </form>
-        <form class="form-inline">
-            <a class="btn btn-outline-success btn btn-primary btn-secondary" href="index.php?action=allcategory">Articles & Catégories</a>
         </form>
         <form class="form-inline">
             <a class="btn btn-outline-success btn btn-primary btn-secondary" href="index.php?action=allhoraire">Les horaires</a>

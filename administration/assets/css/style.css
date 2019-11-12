@@ -40,7 +40,7 @@ html {
 /* Container qui va inclure toute notre page */
 
 .container {
-    padding: 0;
+    padding: 15px;
     max-width: 100%;
     width: 100%;
 }

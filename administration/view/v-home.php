@@ -1,4 +1,4 @@
-<div class="card mb-3"></div>Bienvenue <?= $_SESSION['amicale']['auth']['login'] ?>, vous êtes bien connecté.</div>
+<div class="card mb-3"></div>Bienvenue<?= $_SESSION['amicale']['auth']['login'] ?>, vous êtes bien connecté.</div>
 <br>
 	<div style='text-align: center'><a href='index.php?action=formaddpost' class="btn btn-secondary">Ajouter un article</a></div>
 <br>
@@ -6,6 +6,7 @@
 <table class="table table-bordered table-striped compact" id="myTable">
 	<thead>
 		<tr>
+			<th>Catégorie</th>
 			<th>Titre</th>
 			<th>Contenue</th>
 			<th>Date</th>
@@ -20,7 +21,7 @@
 			$counter=0;
 			
 			foreach($mesPosts as $post)
-			{				
+			{		
 				echo '<tr><td>'.$post->getTitle().'</td>';
 				echo '<td>'.substr(strip_tags($post->getContent()), 0, 50).'...</td>';
 				echo '<td>'.$post->getDatePost().'</td>';

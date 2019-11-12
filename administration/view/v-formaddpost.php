@@ -26,7 +26,7 @@
     </div>
     
     <div class="picture col-md-6">
-        <label for="picture">Photo de l'Article (Formats supportés : jpg, jpeg, png, gif):</label>
+        <label for="picture">Photo de l'Article (Formats supportés : jpg, jpeg, png, gif) :</label>
         <div class="custom-file">
             <input type="file" class="custom-file-input" onchange="return onChangeFileInput(this);" name="picture" id="picture" accept="image/x-png,image/gif,image/jpeg,,image/jpg" required>
             <label class="custom-file-label" or="customFileLangHTML" data-browse="Parcourir">Choisir un fichier</label>

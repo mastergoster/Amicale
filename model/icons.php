@@ -1,19 +1,19 @@
 <?php 
     class Icone {
         private $id;
-        private $codef;
+        private $icons;
 
-        public function __construct($id='', $codef='')
+        public function __construct($id='', $icons='')
         {
             $this->id = $id;
-            $this->codef = $codef;
+            $this->icons = $icons;
         }
 
         //Create
         public function create(){
             require 'db.php';
             $req = $db->prepare("INSERT INTO icons VALUES(NULL, ?)");
-            $req->execute(array($this->codef));
+            $req->execute(array($this->icons));
         }
 
         //Retrieve
@@ -25,26 +25,26 @@
             $result = $req->fetch();
 
             $this->id= $result['id'];
-            $this->codef= $result['codef'];
+            $this->icons= $result['icons'];
         }
 
-        public function retrieveByCodef($codef){
+        public function retrieveByIcons($icons){
             require 'db.php';
 
-            $req = $db->prepare("SELECT * FROM icons WHERE codef = ?");
-            $req->execute(array($codef));
+            $req = $db->prepare("SELECT * FROM icons WHERE icons = ?");
+            $req->execute(array($icons));
             $result = $req->fetch();
 
             $this->id= $result['id'];
-            $this->codef= $result['codef'];
+            $this->icons= $result['icons'];
 
         }
 
         public function update()
         {
             require 'db.php';
-            $req = $db->prepare("UPDATE icons SET codef = ? WHERE id = ?");
-            $req->execute(array($this->codef, $this->id));
+            $req = $db->prepare("UPDATE icons SET icons = ? WHERE id = ?");
+            $req->execute(array($this->icons, $this->id));
         }
 
         public function delete($id){

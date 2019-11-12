@@ -23,10 +23,6 @@ require_once "header.php";?>
 			<input type="radio" class="custom-control-input" id="1" value="1" name="isactive">
 			<label class="custom-control-label" for="1">Activé</label>
 		</div>
-		<div class="form-group col-md-1 col-md-offset-4 custom-control custom-switch">
-			<input type="checkbox" class="custom-control-input" id="1" value="1" name="isactive" checked>
-			<label class="custom-control-label" for="customSwitch1">Activation</label>
-		</div>
 		<div class="ta col-md-1 col-md-offset-4">
 			<input class="btn btn-primary" type="submit" value="Envoyer">
 		</div>
