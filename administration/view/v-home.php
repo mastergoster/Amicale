@@ -1,4 +1,4 @@
-<div class="card mb-3"></div>Bienvenue<?= $_SESSION['amicale']['auth']['login'] ?>, vous êtes bien connecté.</div>
+<div class="card mb-3"></div>Bienvenue <?= $_SESSION['amicale']['auth']['login'] ?>, vous êtes bien connecté.</div>
 <br>
 	<div style='text-align: center'><a href='index.php?action=formaddpost' class="btn btn-secondary">Ajouter un article</a></div>
 <br>
