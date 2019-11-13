@@ -62,5 +62,5 @@
 			<input type='text' name='pictureOldName' value='<?= $monObjet->getPicture() ?>' hidden>
 			<!-- Cache le nom de la photo aux utilisateurs mais conserve l'extension -->
 			<input type='text' name='fileOldName' value='<?= $monObjet->getFile() ?>' hidden>
-		</div>	
-</form>
+		</div>
+	</form>

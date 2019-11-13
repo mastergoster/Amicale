@@ -13,7 +13,7 @@
     ";
 
 echo "
-    <div class='carousel slide col-md-8' id='myCarousel' class='carousel slide' data-ride='carousel'>
+        <div class='carousel slide col-md-8' id='myCarousel' class='carousel slide' data-ride='carousel'>
         <!-- Indicators -->
             <ol class='carousel-indicators'>";
                 foreach($mesPins as $key => $post){
@@ -31,12 +31,12 @@ echo "
                 <div class='carousel-inner'>";
                         foreach($mesPins as $post){
                 
-                                if($mesPins[0] == $post)
+                            if($mesPins[0] == $post)
                             {
-                                echo "<div class='item active carousel-item'>";
+                                echo "<div class='item active carousel-item' data-toggle='modal' data-target='#exampleModalLabel' onClick='getModal(".$post->getId().");'>";
                             }else 
                             {
-                                echo "<div class='item carousel-item'>";
+                                echo "<div class='item carousel-item' data-toggle='modal' data-target='#exampleModalLabel' onClick='getModal(".$post->getId().");'>";
                             }
                                 echo "
 
@@ -68,6 +68,10 @@ foreach($mesHoraires as $horaire){
     ";
 }
 ?>
+
+
+<div class="modal fade" id="exampleModalLabel" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+</div>
 
 <?php 
     // Affichage des posts
@@ -178,4 +182,45 @@ function showhide(counter)
         $(scrollcontent).hide();
     }
 }
+</script>
+
+<script>
+    function getModal(id){
+        var xhttp;
+        document.getElementById("exampleModalLabel").innerHTML = "";
+        xhttp = new XMLHttpRequest();
+        xhttp.onreadystatechange = function() {
+            if (this.readyState == 4 && this.status == 200) {
+                document.getElementById("exampleModalLabel").innerHTML = this.responseText;
+            }
+        };
+        xhttp.open("GET", "../controller/getModal.php?id="+id, true);
+        xhttp.send();   
+    }   
+</script>
+
+<script>
+
+$(function(){
+    $("ul#ticker01").liScroll();
+});
+
+var defile;// l'element a deplacer 
+var psinit = 580; // position horizontale de depart 
+var pscrnt = psinit; 		
+function texteDefile() { 
+	if (!defile) defile = document.getElementById('defile'); 
+	if (defile) { 
+    	if(pscrnt < ( - defile.offsetWidth) ){ 
+        pscrnt = psinit; 
+                } else { 
+         pscrnt+= -1; // pixel par deplacement 
+    	} 
+    	defile.style.left = pscrnt+"px"; 
+	} 
+} 
+
+setInterval("texteDefile()",20); // delai de deplacement  
+
+
 </script>

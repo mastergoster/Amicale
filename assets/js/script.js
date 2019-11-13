@@ -50,8 +50,6 @@ function texteDefile() {
     	defile.style.left = pscrnt+"px"; 
 	} 
 } 
+
 setInterval("texteDefile()",20); // delai de deplacement  
 
-$('#myDatepicker').datetimepicker({
-	format: 'DD-MM-YYYY HH:mm'
-});

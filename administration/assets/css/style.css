@@ -53,7 +53,8 @@ html {
 }
 
 img {
-    max-width: 50%;
+    height: 7em;
+    width: 8em;
 }
 
 .container_header{
@@ -65,7 +66,7 @@ img {
 }
 
 .button_send{
-    margin: 3em;
+    margin: 5em;
     text-align:center;
 }
 
@@ -187,10 +188,12 @@ input[type="date"]:valid::before {
 
 td {
     text-align:center;
-    width: 25%;
 }
 
 .dataTables_wrapper{
     padding: 25px 15px;
 
+}
+.td_image{
+    width: 25%;
 }

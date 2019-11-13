@@ -55,8 +55,14 @@
 
 <script>
 function onChangeFileInput(elem){
-  var sibling = elem.nextSibling.nextSibling;
-  sibling.innerHTML=elem.value;
-  return true;
-}
+    var sibling = elem.nextSibling.nextSibling;
+    sibling.innerHTML=elem.value;
+    return true;
+    }
+</script>
+
+<script>
+        $('#myDatepicker').datetimepicker({
+	    format: 'DD-MM-YYYY HH:mm'
+        });
 </script>

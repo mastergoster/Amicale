@@ -22,10 +22,11 @@
 			
 			foreach($mesPosts as $post)
 			{		
-				echo '<tr><td>'.$post->getTitle().'</td>';
+				echo '<tr><td>'.$post->getCategory()->getName().'</td>';
+				echo '<td>'.$post->getTitle().'</td>';
 				echo '<td>'.substr(strip_tags($post->getContent()), 0, 50).'...</td>';
 				echo '<td>'.$post->getDatePost().'</td>';
-				echo '<td><img src=../assets/uploads/picture/'.$post->getPicture().'></td>';
+				echo '<td class="td_image"><img src=../assets/uploads/picture/'.$post->getPicture().'></td>';
 				echo '<td>'.$post->getPin().'</td>';
 				echo '<td><a href="index.php?action=formeditpost&id='.$post->getId().'"><i class="far fa-edit"></i></a>
 						<td><a href="index.php?action=delpost&id='.$post->getId().'&category='.$post->getCategory()->getId().'"><i class="far fa-trash-alt"></i></a></td></tr>';

@@ -313,3 +313,7 @@ box-shadow: 0 0 0 0.2rem #009DDF;
 footer a:link {
     color: yellow;
 }
+
+.modal-body{
+    text-align: center;
+}
