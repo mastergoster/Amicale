@@ -6,7 +6,7 @@
 		</div>
 		<div class="col-md-1 col-md-offset-4">
 			<input type='text' name='id' value='<?= $monObjet->getId() ?>' hidden>
-			<input class='btn btn-primary' type='submit' value='Modifier'>
+			<input class='btn btn-primary btn-secondary' type='submit' value='Modifier'>
 		</div>
 	</form>
 </div>

@@ -53,7 +53,7 @@
 			</div>
 		</div>
 		<div class="button_send">
-			<input class='btn btn-primary' type='submit' value='Envoyer'>
+			<input class='btn btn-primary btn-secondary' type='submit' value='Envoyer'>
 		</div>
 		<div>
 			<!-- Cache l'ID aux utilisateurs mais est utile pour modifier cette article -->

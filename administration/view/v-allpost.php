@@ -1,5 +1,5 @@
 <br>
-	<div style='text-align: center'><a href='index.php?action=formaddpost' class="btn btn-primary">Ajouter un article</a></div>
+	<div style='text-align: center'><a href='index.php?action=formaddpost' class="btn btn-primary btn-secondary">Ajouter un article</a></div>
 <br>
 
 <table class="col-md-8 col-md-offset-4 table table-bordered table-striped">
