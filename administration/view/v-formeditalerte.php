@@ -9,7 +9,7 @@
 			<input type="text" class="form-control" name="message" id="message" value="<?= $monObjet->getMessage() ?>" required>
 		</div>
 
-		<div class="custom-control custom-radio col-md-3 col-md-offset-4">
+		<div class="custom-control custom-radio col-md-4 col-md-offset-4">
 			<label for="isactive">Activation de l'Alerte :</label>
 		</div>
 		<div class="custom-control custom-radio col-md-2 col-md-offset-4">
