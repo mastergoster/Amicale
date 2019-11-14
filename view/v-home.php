@@ -92,6 +92,9 @@ foreach($mesHoraires as $horaire){
                 </div>
                 <div class='' id='scrollcontent".$counter."' style='display:none'>
                     ".$post->getContent()."
+
+                    <div onclick='showhide(".$counter.")'>  <div class='read_next'>...  Fermer l'article</div></div>
+
                 </div>";
 
                 if($post->getFile() != ''){
