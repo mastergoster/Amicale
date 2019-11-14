@@ -11,7 +11,7 @@
 			<th>Date</th>
 			<th>Photo</th>
 			<th>Fichier Téléchargé</th>
-			<th>Activer</th>
+			<th>Activé</th>
 			<th>Modifier</th>
 			<th>Supprimer</th>
 		</tr>
@@ -31,8 +31,14 @@
 				if ($post->getFile() != ""){
 					echo '<a href="index.php?action=deletefile&id='.$post->getId().'"> <i class="far fa-trash-alt"></i></a>';
 				}
+
+				if ($post->getPin() != 0){
+					echo '<td><i class="fas fa-check"></i></td>';
+				}else{
+					echo '<td><i class="fas fa-times"></i></i></td>';
+				}
 				echo '</td>';
-				echo '<td>'.$post->getPin().'</td>';
+
 				
 				echo '<td><a href="index.php?action=formeditpost&id='.$post->getId().'"><i class="far fa-edit"></i></a>';
 				echo '<td><a href="index.php?action=delpost&id='.$post->getId().'&category='.$post->getCategory()->getId().'"><i class="far fa-trash-alt"></i></a></td></<td>';
