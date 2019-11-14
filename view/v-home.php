@@ -69,7 +69,6 @@ foreach($mesHoraires as $horaire){
 }
 ?>
 
-
 <div class="modal fade" id="exampleModalLabel" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
 </div>
 
@@ -121,7 +120,7 @@ echo "</div>";
     $previous = $page -1;
     $next = $page +1;
 
-    echo "<nav aria-label='pagination'>
+    echo "
             <ul class='pagination'>";
             if($page > 2){
     echo "
@@ -156,7 +155,7 @@ echo "</div>";
                 }
     echo "
             </ul>
-            </nav>";
+            ";
 ?>
 
 <script type="text/javascript">
