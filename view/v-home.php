@@ -82,13 +82,13 @@ foreach($mesHoraires as $horaire){
     {
         echo "
         
-        <div class='card col-md-8' style='width: 28%; margin: 25px;'>
-            <img class='img_article' src='assets/uploads/picture/".$post->getPicture()."' alt='Card image' style='width:100%'>
-            <div class='card-body'>
+        <div class='card col-md-8' style='width: 40vh; margin: 25px;'>
+            <div class='card-body '>
+                <img class='img_article' src='assets/uploads/picture/".$post->getPicture()."' alt='Card image' style='width:100%'>
                 <h4 class='card-title '>".$post->getTitle()."</h4>
-                <div id='preview".$counter."'>
-                    ".substr(strip_tags($post->getContent()), 0, 130). "<div onclick='showhide(".$counter.")'>  <div class='read_next'>...  Lire la suite</div></div>
-                </div>
+                    <div id='preview".$counter."'>
+                        ".substr(strip_tags($post->getContent()), 0, 130). "<div onclick='showhide(".$counter.")'>  <div class='read_next'>...  Lire la suite</div></div>
+                    </div>
                 <div class='' id='scrollcontent".$counter."' style='display:none'>
                     ".$post->getContent()."
 
@@ -99,10 +99,10 @@ foreach($mesHoraires as $horaire){
                 if($post->getFile() != ''){
                 
                     echo "
-                    <p>Télécharger le fichier : <a href='assets/uploads/file/".$post->getFile()."'><i class='fas fa-download'></i></a></p>";
+                    <p class='card-text'>Télécharger le fichier : <a href='assets/uploads/file/".$post->getFile()."'><i class='fas fa-download'></i></a></p>";
                 }
                 echo "
-                <p class='card-text'><small class='text-muted'>".date('d/m/Y', strtotime($post->getDatePost()))."</small></p>
+                    <p class='card-text'><small class='text-muted'>".date('d/m/Y', strtotime($post->getDatePost()))."</small></p>
 
             </div>
         </div>

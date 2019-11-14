@@ -10,6 +10,8 @@
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.0/js/bootstrap.bundle.min.js" integrity="sha384-VoPFvGr9GxhDT3n8vqqZ46twP5lgex+raTCfICQy73NLhN7ZqSfCtfSn4mLA2EFA" crossorigin="anonymous"></script>
         <link href="https://cdn.jsdelivr.net/gh/gitbrent/bootstrap4-toggle@3.6.1/css/bootstrap4-toggle.min.css" rel="stylesheet">
         <link rel="stylesheet" href="//cdn.datatables.net/1.10.20/css/jquery.dataTables.min.css" />
+        <link rel="stylesheet" href="//cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js" />
+
         <link rel="stylesheet" href="assets/css/style.css">
         <script src="https://cdn.tiny.cloud/1/2humv2vm7nu8xw1ah034ryp9vxeuppxv22vj2s1256djkxv1/tinymce/5/tinymce.min.js"></script>
         <script>tinymce.init({selector:'textarea'});</script>

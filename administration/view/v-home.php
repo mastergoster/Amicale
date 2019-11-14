@@ -36,6 +36,11 @@
 				echo "<tr><td colspan=6>Aucun posts</td></tr>";
 			}			
 		?>
+
+		<script>
+		$(document).ready( function () {
+    $('#myTable').DataTable();
+} );</script>
 	</tbody>
 	</table>
 	<br>
