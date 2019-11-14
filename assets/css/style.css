@@ -219,8 +219,12 @@ box-shadow: 0 0 0 0.2rem #009DDF;
 /*Début Carousel */
 
 .carousel {
-    height: 25em;
+    height: 23em;
     vertical-align: middle;
+}
+
+.carousel-indicators{
+    bottom: 55px;
 }
 
 .titre_carousel{
@@ -253,6 +257,12 @@ box-shadow: 0 0 0 0.2rem #009DDF;
     opacity: 0.24;
 }
 
+.carousel-inner>.item>a>img, .carousel-inner>.item>img, .img-responsive, .thumbnail a>img, .thumbnail>img {
+    display: block;
+    width:45%;
+    height: 80%;
+
+}
 /*Début Bandeau des alertes */
 
 #cadrpg {
@@ -306,7 +316,7 @@ box-shadow: 0 0 0 0.2rem #009DDF;
 }
 
 .card-hor{
-    padding: 109px 15px;
+    padding: 95px 15px;
 
 }
 
