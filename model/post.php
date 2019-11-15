@@ -8,8 +8,9 @@ class Post{
     private $picture;
     private $file;
     private $pin;
+    private $counter;
 
-    public function __construct($id='', $category='', $title='', $content='', $datePost='', $picture='', $file='',$pin=''){
+    public function __construct($id='', $category='', $title='', $content='', $datePost='', $picture='', $file='',$pin='', $counter=''){
         $this->id = $id;
         $this->category = $category;
         $this->title= $title;
@@ -18,11 +19,12 @@ class Post{
         $this->picture = $picture;
         $this->file = $file;
         $this->pin = $pin;
+        $this->counter = $counter;
     }
     // La fonction create permet d'insérer les données dans la table post.
     public function create(){
         require 'db.php';
-        $req = $db->prepare("INSERT INTO post VALUES (NULL, ?, ?, ?, ?, ?, ?, ?)");
+        $req = $db->prepare("INSERT INTO post VALUES (NULL, ?, ?, ?, ?, ?, ?, ?, null)");
         $req->execute(array($this->category->getId(), $this->title, $this->content, $this->datePost, $this->picture, $this->file, $this->pin));
     }
 
@@ -46,6 +48,7 @@ class Post{
         $this->picture = $result['picture'];
         $this->file = $result['file'];
         $this->pin = $result['pin'];
+        $this->counter = $result['counter'];
     }
 
     //Update
@@ -54,7 +57,7 @@ class Post{
     {
         require 'db.php';
         $req = $db->prepare("UPDATE post SET idcategory = ?, title = ?, content = ?, datepost = ?, picture = ?, file = ?, pin = ? WHERE id = ?");
-        $req->execute(array($this->category->getId(), $this->title, $this->content, $this->datePost, $this->picture, $this->file, $this->pin, $this->id));
+        $req->execute(array($this->category->getId(), $this->title, $this->content, $this->datePost, $this->picture, $this->file, $this->pin,  $this->id));
     }
     
     //Delete
@@ -76,7 +79,7 @@ class Post{
         while($result = $req->fetch()){
             $maCategory = new Category();
             $maCategory->retrieve($result['idcategory']);
-            $monPost = new Post($result['id'], $maCategory, $result['title'], $result['content'], $result['datepost'], $result['picture'], $result['file'], $result['pin']);
+            $monPost = new Post($result['id'], $maCategory, $result['title'], $result['content'], $result['datepost'], $result['picture'], $result['file'], $result['counter']);
             array_push($mesPosts, $monPost);
         }
         return $mesPosts;
@@ -92,7 +95,7 @@ class Post{
         while($result = $req->fetch()){
             $maCategory = new Category();
             $maCategory->retrieve($result['idcategory']);
-            $monPost = new Post($result['id'], $maCategory, $result['title'], $result['content'], $result['datepost'], $result['picture'], $result['file'], $result['pin']);
+            $monPost = new Post($result['id'], $maCategory, $result['title'], $result['content'], $result['datepost'], $result['picture'], $result['file'], $result['pin'], $result['counter']);
             array_push($mesPosts, $monPost);
         }
         return $mesPosts;
@@ -108,7 +111,7 @@ class Post{
             while($result = $req->fetch()){
                 $maCategory = new Category();
                 $maCategory->retrieve($result['idcategory']);
-                $monPost = new Post($result['id'], $maCategory, $result['title'], $result['content'], $result['datepost'], $result['picture'], $result['file'], $result['pin']);
+                $monPost = new Post($result['id'], $maCategory, $result['title'], $result['content'], $result['datepost'], $result['picture'], $result['file'], $result['pin'], $result['counter']);
                 array_push($mesPosts, $monPost);
             }
             return $mesPosts;
@@ -125,7 +128,7 @@ class Post{
         while($result = $req->fetch()){
             $maCategory = new Category();
             $maCategory->retrieve($result['idcategory']);
-            $monPost = new Post($result['id'], $maCategory, $result['title'], $result['content'], $result['datepost'], $result['picture'], $result['file'], $result['pin']);
+            $monPost = new Post($result['id'], $maCategory, $result['title'], $result['content'], $result['datepost'], $result['picture'], $result['file'], $result['pin'], $result['counter']);
             array_push($mesPosts, $monPost);
         }
         return $mesPosts;
@@ -194,7 +197,7 @@ class Post{
         while($result = $req->fetch()){
             $maCategory = new Category();
             $maCategory->retrieve($result['idcategory']);
-            $monPost = new Post($result['id'], $maCategory, $result['title'], $result['content'], $result['datepost'], $result['picture'], $result['file'], $result['pin']);
+            $monPost = new Post($result['id'], $maCategory, $result['title'], $result['content'], $result['datepost'], $result['picture'], $result['file'], $result['pin'], $result['counter']);
             array_push($mesPosts, $monPost);
     }
     return $mesPosts;
@@ -360,6 +363,26 @@ class Post{
     public function setPin($pin)
     {
         $this->pin = $pin;
+
+        return $this;
+    }
+
+    /**
+     * Get the value of counter
+     */ 
+    public function getCounter()
+    {
+        return $this->counter;
+    }
+
+    /**
+     * Set the value of counter
+     *
+     * @return  self
+     */ 
+    public function setCounter($counter)
+    {
+        $this->counter = $counter;
 
         return $this;
     }

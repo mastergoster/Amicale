@@ -1,9 +1,9 @@
 <form action="index.php?action=addhoraire" method="post">
-		<div class="form-group">
+		<div class="form-group col-md-4 col-md-offset-4">
 			<label for="title">Ajouter un titre d'horaire :</label>
 			<input type="text" class="form-control" name="title" id="title" required>
 		</div>
-        <div class="form-group">
+        <div class="form-group col-md-4 col-md-offset-4">
 			<label for="content">Contenu de l'horaire :</label>
 			<input type="text" class="form-control" name="content" id="content" required>
 		</div>
@@ -15,5 +15,7 @@
 			<input type="radio" class="custom-control-input" id="1" value="1" name="isactive">
 			<label class="custom-control-label" for="1">Activé</label>
 		</div>
-		<input class='btn btn-primary' type='submit' value='Envoyer'>
+		<div class="button_send col-md-10">
+        	<input class='btn btn-primary' type='submit' value='Envoyer'>
+    	</div>
 </form>

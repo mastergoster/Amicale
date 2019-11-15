@@ -10,9 +10,9 @@
 			<label for="name">Nom de la catégorie :</label>
 			<input type="text" class="form-control" name="name" id="name" required>
 		</div>
-		<div class="form-group col-md-4 col-md-offset-4">
-			<input class='btn btn-primary col-md-4 col-md-offset-4' type='submit' value='Envoyer'>
-		</div>
+		<div class="button_send col-md-10">
+        	<input class='btn btn-primary' type='submit' value='Envoyer'>
+    	</div>
 	</form>
 </div>
 
