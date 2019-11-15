@@ -25,7 +25,7 @@
 
         </form>
             <form class="form-inline">
-            <a class="btn btn-outline-success btn btn-primary btn-secondary" href="index.php?action=logout"><i class="fas fa-sign-out-alt"></i></a>
+            <a class="btn btn-outline-success btn btn-primary btn-secondary" href="index.php?action=logout">Déconnexion</i></a>
         </form>  
         
         </div>

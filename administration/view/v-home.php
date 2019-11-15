@@ -11,7 +11,7 @@
 			<th>Contenue</th>
 			<th>Date</th>
 			<th>Photo</th>
-			<th>Activer</th>
+			<th>Activé</th>
 			<th>Modifier</th>
 			<th>Supprimer</th>
 		</tr>
@@ -27,7 +27,12 @@
 				echo '<td>'.substr(strip_tags($post->getContent()), 0, 50).'...</td>';
 				echo '<td>'.$post->getDatePost().'</td>';
 				echo '<td class="td_image"><img src=../assets/uploads/picture/'.$post->getPicture().'></td>';
-				echo '<td>'.$post->getPin().'</td>';
+				if ($post->getPin() != 0){
+					echo '<td><i class="fas fa-check"></i></td>';
+				}else{
+					echo '<td><i class="fas fa-times"></i></i></td>';
+				}
+				echo '</td>';
 				echo '<td><a href="index.php?action=formeditpost&id='.$post->getId().'"><i class="far fa-edit"></i></a>
 						<td><a href="index.php?action=delpost&id='.$post->getId().'&category='.$post->getCategory()->getId().'"><i class="far fa-trash-alt"></i></a></td></tr>';
 			}
@@ -38,9 +43,10 @@
 		?>
 
 		<script>
-		$(document).ready( function () {
-    $('#myTable').DataTable();
-} );</script>
+			$(document).ready( function () {
+			$('#myTable').DataTable();
+			} );
+		</script>
 	</tbody>
 	</table>
 	<br>

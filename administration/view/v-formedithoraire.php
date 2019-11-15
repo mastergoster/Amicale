@@ -8,6 +8,17 @@
 			<label for="content">Modification du contenu de l'horaire :</label>
 			<input type="text" class="form-control" name="content" id="content" value="<?= $monObjet->getContent() ?>" required>
 		</div>
+
+		<input type='text' name='id' value='<?= $monObjet->getIsactive() ?>' hidden>
+		<div class="custom-control custom-radio col-md-2 col-md-offset-4">
+			<input type="radio" class="custom-control-input" id="1" value="1" name="isactive" <?= ($monObjet->getIsactive() == 1)?('checked'):(''); ?>>
+			<label class="custom-control-label" for="1">Activé</label>
+		</div>
+
+		<div class="custom-control custom-radio col-md-2 col-md-offset-4">
+			<input type="radio" class="custom-control-input" id="0" value="0" name="isactive" <?= ($monObjet->getIsactive() == 0)?('checked'):(''); ?>>
+			<label class="custom-control-label" for="0">Désactivé</label>
+		</div>
 		<input type='text' name='id' value='<?= $monObjet->getId() ?>' hidden>
 	<div class="col-md-1 col-md-offset-4">
 		<input class='btn btn-primary btn-secondary' type='submit' value='Modifier'>

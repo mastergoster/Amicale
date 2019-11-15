@@ -188,7 +188,7 @@ class Post{
     {
         require 'db.php';
         require_once 'category.php';
-        $req = $db->prepare("SELECT * FROM post WHERE pin = 1");
+        $req = $db->prepare("SELECT * FROM post WHERE pin = 0");
         $req->execute(array());
         $mesPosts = array();
         while($result = $req->fetch()){

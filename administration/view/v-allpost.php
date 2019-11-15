@@ -38,7 +38,6 @@
 					echo '<td><i class="fas fa-times"></i></i></td>';
 				}
 				echo '</td>';
-
 				
 				echo '<td><a href="index.php?action=formeditpost&id='.$post->getId().'"><i class="far fa-edit"></i></a>';
 				echo '<td><a href="index.php?action=delpost&id='.$post->getId().'&category='.$post->getCategory()->getId().'"><i class="far fa-trash-alt"></i></a></td></<td>';

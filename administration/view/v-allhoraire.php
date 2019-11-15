@@ -7,6 +7,7 @@
 		<tr>
 			<th th-lg >Titre</th>
 			<th th-lg >Contenu</th>
+			<th th-lg >Activé</th>
 			<th>Modification</th>
 			<th>Suppression</th>
 		</tr>
@@ -18,7 +19,7 @@
 			{
 				echo '<tr><td>'.$horaire->getTitle().'</td>';
 				echo '<td>'.$horaire->getContent().'</td>';
-				
+				echo '<td>'.$horaire->getIsactive().'</td>';				
 				echo '<td><a href="index.php?action=formedithoraire&id='.$horaire->getId().'"><i class="far fa-edit"></i></a></td>';
 				echo '<td><a href="index.php?action=delhoraire&id='.$horaire->getId().'"><i class="far fa-trash-alt"></i></a></td></tr>';
 

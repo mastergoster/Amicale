@@ -3,20 +3,22 @@ class Horaire {
     private $id;
     private $content;
     private $title;
+    private $isactive;
 
-    public function __construct($id='', $content='', $title='')
+    public function __construct($id='', $content='', $title='', $isactive='')
     {
         $this->id = $id;
         $this->content = $content;
         $this->title = $title;
+        $this->isactive = $isactive;
     }
 
     public function create()
     {
         require 'db.php';
 
-        $req = $db -> prepare("INSERT INTO horaire VALUES(null, ?, ?)");
-        $req->execute(array($this->content, $this->title));
+        $req = $db -> prepare("INSERT INTO horaire VALUES(null, ?, ?, ?)");
+        $req->execute(array($this->content, $this->title, $this->isactive));
     }
 
     public function retrieve($id)
@@ -30,14 +32,15 @@ class Horaire {
         $this->id = $result["id"];
         $this->content = $result["content"];
         $this->title = $result["title"];
+        $this->isactive = $result["isactive"];
     }
 
     public function update()
     {
         require 'db.php';
 
-        $req = $db->prepare("UPDATE horaire SET content = ?, title = ? WHERE id =?");
-        $req->execute(array($this->content, $this->title, $this->id));
+        $req = $db->prepare("UPDATE horaire SET content = ?, title = ?, isactive = ? WHERE id =?");
+        $req->execute(array($this->content, $this->title, $this->isactive, $this->id));
     }
 
     public function delete($id)
@@ -58,7 +61,7 @@ class Horaire {
 
         while($result = $req->fetch())
         {
-            $monHoraire = new Horaire($result['id'], $result['content'], $result['title']);
+            $monHoraire = new Horaire($result['id'], $result['content'], $result['title'], $result['isactive']);
             array_push($mesHoraires, $monHoraire);
         }
 
@@ -122,6 +125,26 @@ class Horaire {
     public function setTitle($title)
     {
         $this->title = $title;
+
+        return $this;
+    }
+
+    /**
+     * Get the value of isactive
+     */ 
+    public function getIsactive()
+    {
+        return $this->isactive;
+    }
+
+    /**
+     * Set the value of isactive
+     *
+     * @return  self
+     */ 
+    public function setIsactive($isactive)
+    {
+        $this->isactive = $isactive;
 
         return $this;
     }

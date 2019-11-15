@@ -9,8 +9,9 @@
 
             $title = htmlspecialchars($_POST["title"]);
             $content = htmlspecialchars($_POST["content"]);
+            $isactive = htmlspecialchars($_POST["isactive"]);
     
-            $monObjet = new Horaire(0, $title, $content);
+            $monObjet = new Horaire(0, $title, $content, $isactive);
             $monObjet->create();
 
             header('Location: index.php?action=allhoraire');

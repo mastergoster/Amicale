@@ -12,13 +12,14 @@
 		<div class="custom-control custom-radio col-md-4 col-md-offset-4">
 			<label for="isactive">Activation de l'Alerte :</label>
 		</div>
+
 		<div class="custom-control custom-radio col-md-2 col-md-offset-4">
 			<input type="radio" class="custom-control-input" id="1" value="1" name="isactive" <?= ($monObjet->getIsactive() == 1)?('checked'):(''); ?>>
 			<label class="custom-control-label" for="1">Activé</label>
 		</div>
 
 		<div class="custom-control custom-radio col-md-2 col-md-offset-4">
-			<input type="radio" class="custom-control-input" id="0" value="0" name="isactive" <?= ($monObjet->getIsactive() == 1)?('checked'):(''); ?>>
+			<input type="radio" class="custom-control-input" id="0" value="0" name="isactive" <?= ($monObjet->getIsactive() == 0)?('checked'):(''); ?>>
 			<label class="custom-control-label" for="0">Désactivé</label>
 		</div>
 		<div class="ta col-md-2 col-md-offset-2">

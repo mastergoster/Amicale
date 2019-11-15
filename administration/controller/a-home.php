@@ -8,16 +8,10 @@
         $monAlerte = new Alerte();
         $monMessage = $monAlerte->showAlert();
 
-        $page = isset($_GET['p'])?($_GET['p']):(1);
-        $limit = 35;
-        $offsetDebut = ($page-1) * $limit;
-        //$offsetFin = ($page) * $limit;
 
         $monPost = new Post();
-        $mesPosts = $monPost->findAllPaginate($limit, $offsetDebut);
-        $mesPins = $monPost->findAllByPin();
-        $nbPost = $monPost->getNbPost();
-        $nbPage = $nbPost / $limit;
+        $mesPosts = $monPost->findAll();
+
         
         $view = 'home';
     }else{
