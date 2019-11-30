@@ -35,7 +35,7 @@
 </table>
 
 
-<table class="table table-bordered table-striped col-md-8 col-md-offset-4 tableFullScreenOffHoraire">
+<table class="table table-bordered table-striped col-md-8 col-md-offset-4 tableFullScreenOff">
 	<tbody class="tableAdminMobile">
 		<?php
 

@@ -26,7 +26,6 @@ html {
 }
 
 .footer {
-    height: 6vh;
     background: #0969AD;
     color: yellow;
     bottom: 0;
@@ -88,6 +87,22 @@ img {
 
 /* Entête : style des boutons du menu */
 
+
+.fa-home:before {
+    margin:0;
+    font-size: 25px;
+}
+
+.test {
+    padding:0;
+    display:flex;
+    justify-content: space-between;
+}
+
+.test1 {
+    padding-bottom: 14px;
+}
+
 .form-inline{
     margin:0;
 }
@@ -103,15 +118,18 @@ img {
 }
 
 .btn-primary{
+    font-size: 25px;
     background-color: #0969AD!important;
 }
 
 .btn-secondary{
+    font-size: 25px;
     color:yellow;
 }
 
 .dropdown btn-outline-success btn btn-primary{
     padding:-15px;
+    margin:0;
 }
 
 .btn-outline-success a{
@@ -191,7 +209,6 @@ box-shadow: 0 0 0 0.2rem #009DDF;
 /* Menu Burger pour la version mobile */
 
 .navbar {
-    border-radius: 0;
     display: flex;
     justify-content: space-between;
 }
@@ -236,8 +253,11 @@ box-shadow: 0 0 0 0.2rem #009DDF;
 /*Début Carousel */
 
 .carousel {
-    height: 23em;
+    height: 13em;
     vertical-align: middle;
+}
+.row {
+    width: 95vh;
 }
 
 .carousel-indicators{
@@ -366,6 +386,15 @@ footer a:link {
         margin-left: 3vh;
         margin-right: 3vh;
     }
+
+    .carousel {
+        height: 23em;
+    }
+
+    .row {
+        width: 100%;
+    }
+
 }
 
 @media (min-width: 992px){
