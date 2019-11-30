@@ -1,4 +1,4 @@
-<div class="card">
+<div class="card login">
 	<article class="card-body">
 		<h4 class="card-title text-center mb-4 mt-1">Se connecter</h4>
 		<hr>
@@ -21,7 +21,7 @@
 			</div> <!-- input-group.// -->
 		</div> <!-- form-group// -->
 		<div class="form-group">
-			<button type="submit" class="btn btn-primary btn-block"> Connexion  </button>
+			<button type="submit" class="btn btn-primary btn-block">Connexion</button>
 		</form>
 	</article>
 </div>

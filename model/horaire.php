@@ -35,6 +35,20 @@ class Horaire {
         $this->isactive = $result["isactive"];
     }
 
+    public function retrieveByHoraire()
+    {
+        require 'db.php';
+
+        $req = $db->prepare("SELECT * FROM horaire WHERE isactive = 1");
+        $req->execute(array());
+        $result = $req->fetch();
+        
+        $this->id = $result["id"];
+        $this->content = $result["content"];
+        $this->title = $result["title"];
+        $this->isactive = $result["isactive"];
+    }
+
     public function update()
     {
         require 'db.php';

@@ -1,9 +1,9 @@
 </div>
-    <footer class="footer col-md-12">
-        <div class="row">
-            <div class="col-md-8"></div>
+    <footer class="col-12 text-center footer">
+        <div>
+            <div>
 
-                <h4>Nous contacter par : <i class="fas fa-phone-square-alt"></i> : 04 70 02 78 49 - <i class="fas fa-envelope"></i> : <a href="mailto:?to=amicale@ch-montlucon.fr"> amicale@ch-montlucon.fr </a></h4> 
+                <h4 class="text-footer">Nous contacter par : <i class="fas fa-phone-square-alt"></i> : 04 70 02 78 49 - <i class="fas fa-envelope"></i> : <a href="mailto:?to=amicale@ch-montlucon.fr"> amicale@ch-montlucon.fr </a></h4> 
                 <!--Facebook-->
                 <!--<button type="button" class="btn btn-fb"><i class="fab fa-facebook-f"></i></button>
                 Email

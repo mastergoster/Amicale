@@ -3,6 +3,7 @@
     // Affichage du bandeau des alertes
     echo " 
     <div id='cadrpg'> 
+
     <br>
         <div class='defiletext' id='newshr'>
             <a style='width:100%' id='defile' >
@@ -12,8 +13,8 @@
 
     ";
 
-echo "
-        <div class='carousel slide col-md-8' id='myCarousel' class='carousel slide' data-ride='carousel'>
+echo "<div class='row'>
+        <div class='col-lg-7 col-sm-12 mr-1 carousel slide' id='myCarousel' class='carousel slide' data-ride='carousel'>
         <!-- Indicators -->
             <ol class='carousel-indicators'>";
                 foreach($mesPins as $key => $post){
@@ -61,12 +62,12 @@ echo "
     </a>
     
 </div>";
-foreach($mesHoraires as $horaire){
+
     echo "
-    <div class='card card-hor'>Horaire d'ouverture de l'amicale : <br><br> 18 Avenue du 8 Mai 1945  <br> 03100 Montluçon <br><br><p>".$horaire->getContent()."</p></div>
+    <div class='col-lg-4 col-sm-12 text-center card-hor'>Horaire d'ouverture de l'amicale : <br><br> 18 Avenue du 8 Mai 1945  <br> 03100 Montluçon <br><br><p>".$monHoraire->getContent()."</p></div></div>
 
     ";
-}
+
 ?>
 
 <div class="modal fade" id="exampleModalLabel" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -82,8 +83,8 @@ foreach($mesHoraires as $horaire){
     {
         echo "
         
-        <div class='card col-md-8' style='width: 28%; margin: 25px;'>
-            <img class='img_article' src='assets/uploads/picture/".$post->getPicture()."' alt='Card image' style='width:100%'>
+        <div class='col-lg-3 col-md-3 col-sm-3 card card-home'>
+            <img class='img_article' src='assets/uploads/picture/".$post->getPicture()."' alt='Card image' class='img-fluid'>
             <div class='card-body'>
                 <h4 class='card-title '>".$post->getTitle()."</h4>
                 <div id='preview".$counter."'>
@@ -121,8 +122,9 @@ echo "</div>";
     $next = $page +1;
 
     echo "
-            <ul class='pagination'>";
-            if($page > 2){
+            <div class='text-center'>
+                <ul class='pagination'>";
+                if($page > 2){
     echo "
                 <li class='page-item'>
                     <a  href='index.php?action=home&p=$previous"; echo ($idCategory != 0)?("&idcategory=".$idCategory):(""); echo"' aria-label='Previous'>
@@ -155,6 +157,7 @@ echo "</div>";
                 }
     echo "
             </ul>
+            </div>
             ";
 ?>
 

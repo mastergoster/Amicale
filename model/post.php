@@ -10,7 +10,8 @@ class Post{
     private $pin;
     private $counter;
 
-    public function __construct($id='', $category='', $title='', $content='', $datePost='', $picture='', $file='',$pin='', $counter=''){
+    public function __construct($id='', $category='', $title='', $content='', $datePost='', $picture='', 
+    $file='',$pin='', $counter=''){
         $this->id = $id;
         $this->category = $category;
         $this->title= $title;
@@ -21,11 +22,13 @@ class Post{
         $this->pin = $pin;
         $this->counter = $counter;
     }
+
     // La fonction create permet d'insérer les données dans la table post.
     public function create(){
         require 'db.php';
         $req = $db->prepare("INSERT INTO post VALUES (NULL, ?, ?, ?, ?, ?, ?, ?, null)");
-        $req->execute(array($this->category->getId(), $this->title, $this->content, $this->datePost, $this->picture, $this->file, $this->pin));
+        $req->execute(array($this->category->getId(), $this->title, $this->content, $this->datePost, 
+        $this->picture, $this->file, $this->pin));
     }
 
     // La fonction retrieve 

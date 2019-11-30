@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-light" style="height:40px" >
+<nav class="navbar navbar-expand-lg navbar-light bg-light" >
     <a class="navbar-brand"><img class="logosize" src="assets/images/logo_amicale.png" alt="Logo Amicale" class="img-circle img-responsive"></a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -25,11 +25,15 @@
                     <a class='dropdown-item' href='index.php?action=home&idcategory=".$maCategory->getId()."'>".$maCategory->getName()."</a>";
 
                 }
+
                 ?>
+
             </div>
+            <form class="choco btn-outline-success btn btn-primary">
+                <a href="index.php?action=login">Connexion</i></a>
+            </form>
+
         </div>           
         
-        <form class="choco btn-outline-success btn btn-primary">
-            <a href="index.php?action=login">Connexion</i></a>
-        </form>
+
 </nav>

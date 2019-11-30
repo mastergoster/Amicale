@@ -18,6 +18,7 @@ require_once 'model/horaire.php';
         $offsetDebut = ($page) * $limit;
 
         $monPost = new Post();
+        
         if($idCategory != 0){
                 $mesPosts = $monPost->findAllPaginateByCategory($idCategory, $limit, $offsetDebut);
                 $nbPost = $monPost->getNbPostByCategory($idCategory);
@@ -29,6 +30,7 @@ require_once 'model/horaire.php';
         }
 
         $mesPins = Post::findAllByPin();
+
         $nbPage = ceil($nbPost / $limit);
 
         if($page >= $nbPage && $nbPage != 0){
@@ -40,8 +42,9 @@ require_once 'model/horaire.php';
                 header('Location: index.php?action=home');
         }
 
-        $mesHoraires = Horaire::findAll();
-
-$view = 'home';
+        $monHoraire=new Horaire();
+        $monHoraire->retrieveByHoraire();
+        
+        $view = 'home';
 
 ?>

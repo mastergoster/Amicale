@@ -26,16 +26,27 @@ html {
 }
 
 .footer {
-    position: absolute;
-    width: 100%;
-    height: 60px;
+    height: 6vh;
     background: #0969AD;
     color: yellow;
+    bottom: 0;
+    top: 100%;
+    right: 0;
+    left: 0;
+}
+
+.text-footer{
+    padding-top: 1vh;
+}
+
+@media (min-width: 768px){
+    .text-footer{
+        padding-top: 2vh;
+    }
 }
 
 .pagination {
     display: inline-flex;    
-    margin-left: 42%;
     justify-content: center;
 }
 
@@ -76,6 +87,10 @@ img {
 }
 
 /* Entête : style des boutons du menu */
+
+.form-inline{
+    margin:0;
+}
 
 .btn{
     border: #009DDF;
@@ -177,6 +192,8 @@ box-shadow: 0 0 0 0.2rem #009DDF;
 
 .navbar {
     border-radius: 0;
+    display: flex;
+    justify-content: space-between;
 }
 
 .nav-wrapper {
@@ -299,6 +316,12 @@ box-shadow: 0 0 0 0.2rem #009DDF;
     margin:1em;
 }
 
+/* Page de connexion */
+
+.login{
+    height: 84vh;
+}
+
 /* Style de la page error.php */
 
 .error-template {
@@ -316,8 +339,16 @@ box-shadow: 0 0 0 0.2rem #009DDF;
 }
 
 .card-hor{
-    padding: 95px 15px;
+    height: 150px;
+    padding-top: 2vh;
+    border: solid 1px black;
+}
 
+@media (min-width: 960px){
+    .card-hor{
+        padding-top: 10vh;
+        height:23em;
+    }
 }
 
 footer a:link {
@@ -327,3 +358,29 @@ footer a:link {
 .modal-body{
     text-align: center;
 }
+
+
+@media (min-width: 768px){
+    .card-home {
+        margin-top: 2vh;
+        margin-left: 3vh;
+        margin-right: 3vh;
+    }
+}
+
+@media (min-width: 992px){
+    .card-home {
+        margin-top: 2vh;
+        margin-left: 4vh;
+        margin-right: 4vh;
+    }
+}
+
+@media (min-width: 1200px){
+    .card-home {
+        margin-top: 2vh;
+        margin-left: 5vh;
+        margin-right: 5vh;
+    }
+}
+

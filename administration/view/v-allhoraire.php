@@ -2,7 +2,7 @@
 	<div style='text-align: center'><a href='index.php?action=formaddhoraire' class="btn btn-secondary">Ajouter un horaire</a></div>
 <br>
 
-<table class="table table-bordered table-striped col-md-8 col-md-offset-4">
+<table class="table table-bordered table-striped col-md-8 col-md-offset-4 tableMobileOff">
 	<thead>
 		<tr>
 			<th th-lg >Titre</th>
@@ -33,4 +33,27 @@
 		?>
 	</tbody>
 </table>
+
+
+<table class="table table-bordered table-striped col-md-8 col-md-offset-4 tableFullScreenOffHoraire">
+	<tbody class="tableAdminMobile">
+		<?php
+
+			foreach($mesHoraires as $horaire)
+			{
+				echo '<td>'.$horaire->getContent().'</td>';
+				echo '<td><a href="index.php?action=formedithoraire&id='.$horaire->getId().'"><i class="far fa-edit"></i></a></td>';
+				echo '<td><a href="index.php?action=delhoraire&id='.$horaire->getId().'"><i class="far fa-trash-alt"></i></a></td></tr>';
+
+			}
+
+			if(count($mesHoraires) == 0)
+			{
+				echo "<tr><td colspan=6>Aucun posts</td></tr>";
+			}
+
+		?>
+	</tbody>
+</table>
+
 <br>
