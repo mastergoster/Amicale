@@ -37,7 +37,7 @@ $(function(){
 
 
 var defile;// l'element a deplacer 
-var psinit = 580; // position horizontale de depart 
+var psinit = 700; // position horizontale de depart 
 var pscrnt = psinit; 		
 function texteDefile() { 
 	if (!defile) defile = document.getElementById('defile'); 

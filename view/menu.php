@@ -1,16 +1,16 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-light" >
-    <a class="navbar-brand"><img class="logosize" src="assets/images/logo_amicale.png" alt="Logo Amicale" class="img-circle img-responsive"></a>
+<nav class="navbar navbar-expand" >
+    <a href="index.php" class="navbar-brand"><img class="logosize" src="assets/images/Webp.net-resizeimage.png" alt="Logo Amicale" class="img-circle img-responsive"></a>
     
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"><span class="navbar-toggler-icon"></i></span>
     </button>
-        <div class="test">
-        <form class="form-inline nav-bar mr-auto">
+        <div class="container-nav">
+        <!--<form class="form-inline nav-bar mr-auto">
             <a class="test1 nav-item btn btn-outline-success btn btn-primary btn-secondary" href="index.php?action=home"><i class="fas fa-home"></i></a>
-        </form>
+        </form>-->
 
-            <div class="form-inline dropdown btn-outline-success btn btn-primary">
+            <div class="form-inline dropdown">
                 <div class="collapse navbar-collapse" id="navbarNav">
-                    <button class="btn btn-secondary dropdown-toggle navbar-expand-lg navbar-light bg-light style='color: yellow;'" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Catégories</button>
+                        <button class="dropdown" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Catégories <i class="fas fa-caret-down"></i></button>
                     <div class="dropdown-menu navbar-expand-lg navbar-light bg-light aria-labelledby=dropdownMenuButton">
                         <?php 
 
@@ -26,7 +26,7 @@
                         }
                         ?>
                     </div>
-                    <form class="office_connexion btn-outline-success btn btn-primary">
+                    <form class="office_connexion">
                         <a href="index.php?action=login">Connexion</i></a>
                     </form>
                 </div>
