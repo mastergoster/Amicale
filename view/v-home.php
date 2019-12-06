@@ -13,7 +13,7 @@
 
     ";
 
-echo "<div class='row'>
+echo "<div class='row debugblue'>
         <div class='col-lg-7 col-sm-12 mr-1 carousel slide' id='myCarousel' class='carousel slide' data-ride='carousel'>
         <!-- Indicators -->
             <ol class='carousel-indicators'>";
@@ -75,7 +75,7 @@ echo "
 
 <?php 
     // Affichage des posts
-
+ echo"<div class='bla container debugred'>";
     // permet de mettre un id diffèrent pour chaque article
     $counter=0;
     
@@ -83,7 +83,7 @@ echo "
     {
         echo "
         
-        <div class='col-lg-3 col-md-3 col-sm-3 card card-home'>
+        <div class='col-lg-3 col-md-3 col-sm-3 card card-home debuggreen'>
             <img class='img_article' src='assets/uploads/picture/".$post->getPicture()."' alt='Card image' class='img-fluid'>
             <div class='card-body'>
                 <h4 class='card-title '>".$post->getTitle()."</h4>
@@ -113,6 +113,8 @@ echo "
     }
 
 echo "</div>";
+
+
 
     // Affiche le nombre de pagination (6)
 
@@ -147,6 +149,7 @@ echo "</div>";
                     ++$i;
                 }
                 if($page<=$nbPage-4){
+                
     echo "
                 <li class='page-item'>
                     <a href='index.php?action=home&p=$next"; echo ($idCategory != 0)?("&idcategory=".$idCategory):(""); echo"' aria-label='Next'>

@@ -3,6 +3,7 @@
     {
     require_once "../model/category.php";
     $id = $_GET["id"];
+    
     $monObjet = new Category();
     $monObjet->delete($id);
 

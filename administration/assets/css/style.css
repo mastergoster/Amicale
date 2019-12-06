@@ -207,6 +207,7 @@ td {
     width: 25%;
 }
 
+/* Affichage du mobile vers les écrans avec une résolution supérieur */
 
 .tableFullScreenOff{
     display: none;
@@ -215,6 +216,8 @@ td {
 .tableAdminMobile{
     width: 100%;
 }
+
+/* Utilisation des media queries */
 
 @media all and (max-device-width: 1112px)
 {

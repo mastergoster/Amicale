@@ -10,6 +10,7 @@
 
 		$monObjet = new Category($id, NULL, NULL, $name);
 		$monObjet->update();
+	
 
 		header('Location: index.php?action=allcategory');
 	}else{

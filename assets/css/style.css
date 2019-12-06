@@ -54,6 +54,7 @@ html {
 .container {
     max-width: 100%;
     padding: 0;
+    margin: 0 auto;
 }
 
 /* Logo de l'Amicale */
@@ -95,6 +96,7 @@ img {
 
 .test {
     padding:0;
+    width: 100%;
     display:flex;
     justify-content: space-between;
 }
@@ -257,7 +259,11 @@ box-shadow: 0 0 0 0.2rem #009DDF;
     vertical-align: middle;
 }
 .row {
-    width: 95vh;
+    /*width: 95vw;*/
+}
+
+.bla{
+    display: flex;
 }
 
 .carousel-indicators{
@@ -358,6 +364,9 @@ box-shadow: 0 0 0 0.2rem #009DDF;
     margin-right:10px; 
 }
 
+.card-home{
+    display: flex;
+}
 .card-hor{
     height: 150px;
     padding-top: 2vh;

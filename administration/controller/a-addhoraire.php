@@ -6,7 +6,6 @@
         if($_SESSION['amicale']['auth']['slug'] == 'admin')
         {
             require_once "../model/horaire.php";
-
             $title = htmlspecialchars($_POST["title"]);
             $content = htmlspecialchars($_POST["content"]);
             $isactive = htmlspecialchars($_POST["isactive"]);

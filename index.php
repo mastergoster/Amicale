@@ -11,7 +11,23 @@ session_start();
         $scriptAction = 'controller/a-' . $action . '.php';
 
         if(file_exists($scriptAction)){
-            include $scriptAction;
+            $verifpost = ['add', "del", "edi"];
+            if(in_array(substr($action, 0, 3), $verifpost)){
+                
+               if(!empty($_POST)){
+                include $scriptAction;
+               }else{
+                   if(substr($action, 0, 4)=="edit"){
+                    header('Location: index.php?action=all'.substr($action, 4));
+                   }else{
+                    header('Location: index.php?action=all'.substr($action, 3));
+                   }
+                
+               }
+            }else{
+                include $scriptAction;
+            }
+           
 
             // Ajout du header
                 include "view/header.php";
