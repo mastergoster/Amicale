@@ -75,25 +75,25 @@ echo "
 
 <?php 
     // Affichage des posts
- echo"<div class='bla container debugred'>";
+ echo"<div class='bla container'>";
     // permet de mettre un id diffèrent pour chaque article
-    $counter=0;
+
     
-    foreach($mesPosts as $post)
+    foreach($mesPosts as $key => $post)
     {
         echo "
         
-        <div class='col-lg-3 col-md-3 col-sm-3 card card-home debuggreen'>
+        <div class='col-lg-3 col-md-3 col-sm-3 card card-home'>
             <img class='img_article' src='assets/uploads/picture/".$post->getPicture()."' alt='Card image' class='img-fluid'>
             <div class='card-body'>
                 <h4 class='card-title '>".$post->getTitle()."</h4>
-                <div id='preview".$counter."'>
-                    ".substr(strip_tags($post->getContent()), 0, 130). "<div onclick='showhide(".$counter.")'>  <div class='read_next'>...  Lire la suite</div></div>
+                <div id='preview".$key."'>
+                    ".substr(strip_tags($post->getContent()), 0, 130). "<div onclick='showhide(".$key.")'>  <div class='read_next'>...  Lire la suite</div></div>
                 </div>
-                <div class='' id='scrollcontent".$counter."' style='display:none'>
+                <div class='' id='scrollcontent".$key."' style='display:none'>
                     ".$post->getContent()."
 
-                    <div onclick='showhide(".$counter.")'>  <div class='read_next'>...  Fermer l'article</div></div>
+                    <div onclick='showhide(".$key.")'>  <div class='read_next'>...  Fermer l'article</div></div>
 
                 </div>";
 
@@ -109,7 +109,7 @@ echo "
         </div>
 
         ";
-        ++$counter;
+
     }
 
 echo "</div>";

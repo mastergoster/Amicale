@@ -15,16 +15,16 @@ session_start();
             $verifpost = ['add', "del", "edi"];
             if(in_array(substr($action, 0, 3), $verifpost)){
                 
-               if(!empty($_POST)){
+                if(!empty($_POST)){
                 include $scriptAction;
-               }else{
-                   if(substr($action, 0, 4)=="edit"){
+                }else{
+                    if(substr($action, 0, 4)=="edit"){
                     header('Location: index.php?action=all'.substr($action, 4));
-                   }else{
+                    }else{
                     header('Location: index.php?action=all'.substr($action, 3));
-                   }
+                    }
                 
-               }
+                }
             }else{
                 include $scriptAction;
             }
