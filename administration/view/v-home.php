@@ -3,7 +3,7 @@
 	<div style='text-align: center'><a href='index.php?action=formaddpost' class="btn btn-secondary">Ajouter un article</a></div>
 <br>
 
-<table class="table table-bordered table-striped compact tableMobileOff" id="myTable">
+<table class="table table-bordered table-striped compact tableMobileOff" id="myiddatatableadminTable">
 	<thead>
 		<tr> 
 			<th>Catégorie</th>
@@ -45,14 +45,14 @@
 
 		<script>
 			$(document).ready( function () {
-			$('#myTable').DataTable();
+			$('#iddatatableadmin').DataTable();
 			} );
 		</script>
 	</tbody>
 	</table>
 
 
-	<table class="table table-bordered table-striped compact tableFullScreenOff" id="myTable">
+	<table class="table table-bordered table-striped compact tableFullScreenOff" id="middatatableadminyTable">
 	<tbody class="tableAdminMobile">
 			<?php
 				$counter=0;
@@ -73,7 +73,7 @@
 
 		<script>
 			$(document).ready( function () {
-			$('#myTable').DataTable();
+			$('#myiddatatableadminTable').DataTable();
 			} );
 		</script>
 	</tbody>
